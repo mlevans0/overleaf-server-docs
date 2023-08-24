@@ -1,0 +1,56 @@
+site_name: Overleaf Server Docs
+repo_url: https://github.com/overleaf
+theme:
+  language: en
+  name: material
+  favicon: assets/favicon.ico
+  logo: assets/overleaf-o-white.svg
+  palette: 
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: green
+      toggle:
+        icon: material/brightness-7 
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: green
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - search.share
+    - navigation.tabs
+    - navigation.footer
+    - navigation.path
+    - navigation.top
+plugins:
+  - search
+extra:
+  generator: true
+copyright: Overleaf part of Digital Science
+markdown_extensions:
+  - md_in_html
+  - admonition
+  - toc:
+      permalink: true
+nav:
+  - Home: 
+    - Welcome: index.md
+  - Getting started:
+    - Overview: getting-started/index.md
+    - What skills do I need: getting-started/what-skills-do-i-need.md
+    - Successful rollout: getting-started/successful-rollout.md
+    - Hardware requirements: getting-started/hardware-requirements.md
+  - Installation: installation.md
+  - Configuration:
+    - setup/index.md
+    - LDAP: setup/changing-the-colors.md
+    - SSO:
+      - setup/extensions/index.md
+      - Azure: setup/extensions/python-markdown.md
+      - Okta: setup/extensions/python-markdown.md
+  - Release notes: release-notes.md
+  - How to upgrade: upgrade.md
+  - Troubleshooting: troubleshooting.md
+  

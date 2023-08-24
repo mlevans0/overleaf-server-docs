@@ -1,0 +1,3 @@
+# Overview
+
+Before proceeding with the installation of Overleaf, we highly recommend thoroughly reading the documentation. Familiarizing yourself with the requirements, installation process, configuration options and maintenance sections will ensure a smoother rollout experience. It's also crucial to have a solid understanding of your organization's requirements for utilizing Overleaf and the necessary underlying infrastructure needed for its successful operation
