@@ -1,5 +1,5 @@
 <h1 align="center">
-  <a href="https://www.overleaf.com"><img src="../assets/logo.png" alt="Overleaf" width="300"></a>
+  <a href="https://www.overleaf.com"><img src="assets/logo.png" alt="Overleaf" width="300"></a>
 </h1>
 
 ## Welcome
