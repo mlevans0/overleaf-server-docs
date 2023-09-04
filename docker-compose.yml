@@ -1,14 +1,17 @@
 version: '3'
 
 services:
-  mkDocs:
-    container_name: mkdocs
+  docs:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: overleaf-server-docs
+    stdin_open: true
+    tty: true
+    hostname: overleaf-server-docs
     command: serve --dev-addr=0.0.0.0:8000
-    hostname: mkdocs
-    image: squidfunk/mkdocs-material:latest
     ports: 
       - 8000:8000
     restart: unless-stopped
     volumes:
       - .:/docs:ro
-      

@@ -24,11 +24,22 @@ theme:
     - navigation.footer
     - navigation.path
     - navigation.top
+    - content.code.copy
+    - content.code.select
+    - content.code.annotate
 plugins:
   - search
+  - markdownextradata
 extra:
   generator: true
-copyright: Overleaf part of Digital Science
+  versions:
+    community-edition-full: Overleaf Community Edition
+    community-edition-short: Community Edition
+    server-pro-full: Overleaf Server Pro
+    server-pro-short: Server Pro
+    copyright: Overleaf part of Digital Science
+    latest-two-point-releases-of-current-version: 4.1.0 and 4.1.1
+    last-released-point-release-of-previous-major-version: 3.5.11
 markdown_extensions:
   - md_in_html
   - admonition
@@ -38,10 +49,10 @@ nav:
   - Home: 
     - Welcome: index.md
   - Getting started:
-    - Overview: getting-started/index.md
-    - What skills do I need: getting-started/what-skills-do-i-need.md
-    - Successful rollout: getting-started/successful-rollout.md
+    - Planning for success: getting-started/index.md
+    - What skills do I need?: getting-started/what-skills-do-i-need.md
     - Hardware requirements: getting-started/hardware-requirements.md
+    - Software requirements: getting-started/software-requirements.md
   - Installation: installation.md
   - Configuration:
     - setup/index.md
@@ -50,6 +61,7 @@ nav:
       - setup/extensions/index.md
       - Azure: setup/extensions/python-markdown.md
       - Okta: setup/extensions/python-markdown.md
+  - Administration: administration.md
   - Release notes: release-notes.md
   - How to upgrade: upgrade.md
   - Troubleshooting: troubleshooting.md

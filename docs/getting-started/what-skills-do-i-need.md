@@ -9,4 +9,4 @@ We recommend that the on-site administrator of your Overleaf Server instance has
 - Experience running applications using Docker is a bonus
 - Experience with coordinating maintenance windows for upgrades of live production systems
 
-We find that administrators with these skills are able to provide the best experience for end-users of Overleaf Server at your organization.
+We find that on-site administrators with these skills will be able to provide the best experience for users of Overleaf at your organization.
