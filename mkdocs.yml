@@ -37,6 +37,8 @@ extra:
     community-edition-short: Community Edition
     server-pro-full: Overleaf Server Pro
     server-pro-short: Server Pro
+    toolkit-full: Overleaf Toolkit
+    toolkit-short: Toolkit
     copyright: Overleaf part of Digital Science
     latest-two-point-releases-of-current-version: 4.1.0 and 4.1.1
     last-released-point-release-of-previous-major-version: 3.5.11
@@ -53,15 +55,19 @@ nav:
     - What skills do I need?: getting-started/what-skills-do-i-need.md
     - Hardware requirements: getting-started/hardware-requirements.md
     - Software requirements: getting-started/software-requirements.md
-  - Installation: installation.md
+    - Overleaf microservices: getting-started/microservices.md
+  - Installation: 
+    - Using the Overleaf Toolkit: installation/using-the-toolkit.md
   - Configuration:
-    - setup/index.md
+    - configuration/index.md
     - LDAP: setup/changing-the-colors.md
     - SSO:
       - setup/extensions/index.md
       - Azure: setup/extensions/python-markdown.md
       - Okta: setup/extensions/python-markdown.md
-  - Administration: administration.md
+  - Administration: 
+    - administration.md
+    - Using the Overleaf Toolkit: administration/using-the-toolkit.md
   - Release notes: release-notes.md
   - How to upgrade: upgrade.md
   - Troubleshooting: troubleshooting.md

@@ -10,7 +10,7 @@ Before initiating the installation process, ensure you have administrative acces
 
 ## How do I install Overleaf?
 
-Follow the installation instructions provided in the documentation for your chosen edition of Overleaf. These instructions will guide you through downloading the necessary files, configuring settings, and deploying Overleaf within your infrastructure. Be sure to follow each step carefully and remember to check the troubleshooting section of this documentation should you run into any problems.
+Follow the installation instructions provided in the documentation for your chosen edition of Overleaf. These instructions will guide you through downloading the necessary files, configuring some basic settings, and getting familiarized with the Toolkit. Be sure to follow each step carefully and remember to check the troubleshooting section of this documentation should you run into any problems.
 
 ## What about making configuration changes?
 
@@ -33,3 +33,7 @@ The documentation will also provide guidance on maintaining your Overleaf Server
 If you encounter any problems, we recommend first consulting the troubleshooting section of the documentation as it contains common issues and required information needed by the support team if you need to reach out for assistance.
 
 By following these steps and thoroughly reading the documentation, you'll be well-prepared to install, configure, and maintain Overleaf according to your organization's requirements. Remember that a solid understanding of your infrastructure and the installation process is key to a successful deployment.
+
+!!! note
+
+    Please note that we are **not** able to provide support for local installations of the free {{ versions['community-edition-short'] }}.
