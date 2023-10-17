@@ -6,7 +6,7 @@ In both cases, lines beginning with `#` are treated as comments.
 
 !!! note
 
-    We recommend that you re-create the docker containers after changing anything in `overleaf.rc`, `variables.env` or `docker-compose.yaml` by running `docker compose up` for Docker Compose deployments or `bin/up` for {{ versions['toolkit-short'] }} deployments.
+    We recommend that you re-create the Docker containers after changing anything in `overleaf.rc`, `variables.env` or `docker-compose.yaml` by running `docker compose up` for Docker Compose deployments or `bin/up` for {{ versions['toolkit-short'] }} deployments.
 
 ## Container ##
 
@@ -26,14 +26,14 @@ When set to `true`, tells your deployment method to use the {{ versions['server-
 
 `SIBLING_CONTAINERS_ENABLED` 
 
-When set to `true`, tells your deployment method to use the **Sibling Containers** technique for compiling projects in separate sandboxes, using a separate docker container for each project. See the [Sandboxed Compiles](https://github.com/sharelatex/sharelatex/wiki/Server-Pro:-sandboxed-compiles) documentation for more information.
+When set to `true`, tells your deployment method to use the **Sibling Containers** technique for compiling projects in separate sandboxes, using a separate Docker container for each project. See the [Sandboxed Compiles](https://github.com/sharelatex/sharelatex/wiki/Server-Pro:-sandboxed-compiles) documentation for more information.
 
 - Requires `SERVER_PRO=true`
 - Default: false
 
 `DOCKER_SOCKET_PATH` 
 
-Sets the path to the docker socket on the host machine (the machine running the {{ versions['toolkit-short'] }} code or Docker Compose). When `SIBLING_CONTAINERS_ENABLED` is `true`, the socket will be mounted into the container, to allow the compiler service to spawn new Docker containers on the host.
+Sets the path to the Docker socket on the host machine (the machine running the {{ versions['toolkit-short'] }} code or Docker Compose). When `SIBLING_CONTAINERS_ENABLED` is `true`, the socket will be mounted into the container, to allow the compiler service to spawn new Docker containers on the host.
 
 - Requires `SIBLING_CONTAINERS_ENABLED=true`
 - Default: /var/run/docker.sock

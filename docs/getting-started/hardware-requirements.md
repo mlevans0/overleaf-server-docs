@@ -61,7 +61,7 @@ Overleaf Server instances exposes environment variables for adjusting these ngin
 - `NGINX_WORKER_CONNECTIONS` for [`worker_connections`](https://nginx.org/en/docs/ngx_core_module.html#worker_connections) (default `768`)
 - `NGINX_KEEPALIVE_TIMEOUT` for [`keepalive_timeout`](https://nginx.org/en/docs/http/ngx_http_core_module.html#keepalive_timeout) (default `65`)
 
-When running another proxy in front of the `sharelatex` container (e.g. for TLS termination), the `NGINX_KEEPALIVE_TIMEOUT` in the Overleaf Server instance needs to be larger than the previous proxy. E.g. with another nginx process on the docker host "nginx-host", here are two examples: 
+When running another proxy in front of the `sharelatex` container (e.g. for TLS termination), the `NGINX_KEEPALIVE_TIMEOUT` in the Overleaf Server instance needs to be larger than the previous proxy. E.g. with another nginx process on the Docker host "nginx-host", here are two examples: 
         
 - default value `NGINX_KEEPALIVE_TIMEOUT`, use [`keepalive_timeout 60s`](https://nginx.org/en/docs/http/ngx_http_upstream_module.html#keepalive_timeout) (default value in upstream) in "nginx-host"
 - custom value `NGINX_KEEPALIVE_TIMEOUT=100s`, use []`keepalive_timeout 90s`](https://nginx.org/en/docs/http/ngx_http_upstream_module.html#keepalive_timeout) (custom value in upstream) in "nginx-host"

@@ -4,17 +4,17 @@ Before proceeding with the installation of Overleaf, we highly recommend thoroug
 
 ## What can I do to prepare?
 
-Understand the requirements for running Overleaf. This involves evaluating your organization's existing server environment, network capabilities and storage resources. Ensure that your infrastructure meets or exceeds the specified requirements outlined in the follow sections.
+Understand the requirements for running Overleaf. This involves evaluating your organization's existing server environment, network capabilities and storage resources. Ensure that your infrastructure meets or exceeds the specified requirements outlined in this documentation.
 
 Before initiating the installation process, ensure you have administrative access to the server where you intend to deploy Overleaf. This may involve coordinating with your IT team or system administrators to obtain the necessary permissions and resources. Additionally, review any security considerations or network policies that might impact the installation.
 
 ## How do I install Overleaf?
 
-Follow the installation instructions provided in the documentation for your chosen edition of Overleaf. These instructions will guide you through downloading the necessary files, configuring some basic settings, and getting familiarized with the Toolkit. Be sure to follow each step carefully and remember to check the troubleshooting section of this documentation should you run into any problems.
+This documentation will guide you through downloading the necessary files, configuring some basic settings, and get you familiarized with the {{ versions['toolkit-full'] }} so you are able to deploy your chosen version of Overleaf. Be sure to follow each step carefully and remember to check the troubleshooting section of this documentation should you run into any problems.
 
 ## What about making configuration changes?
 
-Once Overleaf is installed, you'll have the opportunity to configure various settings and options according to your organization's needs. Refer to the documentation to learn about customization options, user management, authentication methods, and any other features that can be tailored to your requirements.
+Once Overleaf is installed, you'll have the opportunity to configure various settings and options according to your organization's needs. Refer to the documentation to learn about customization options, user management, authentication methods, and various other features that can be tailored to your requirements.
 
 ## What about administering my Overleaf instance?
 
@@ -26,7 +26,7 @@ Overleaf requires regular maintenance to ensure optimal performance and security
 
 ## How do I upgrade?
 
-The documentation will also provide guidance on maintaining your Overleaf Server instance and address common maintenance tasks such as performing upgrades and backups.
+The documentation will provide you with guidance on maintaining your Overleaf Server instance and address common maintenance tasks such as performing upgrades and backups.
 
 ## What if I have a problem?
 

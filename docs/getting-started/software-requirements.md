@@ -1,33 +1,31 @@
-## Operating systems
+## Operating systems ##
 
 For the best experience when running Overleaf, we highly recommend using a **Debian-based** operating system, such as **Ubuntu**. This choice aligns with the software's development environment and is the preferred option among the majority of Overleaf users.
 
-We recommend a debian based operating system such as Ubuntu for running Overleaf, this is what the software has been developed using and most people use when running Overleaf.
-
 !!! danger "Important"
 
-    When utilizing {{versions['server-pro-short']}} with Sandbox Compiles, it's **important** to note that the application requires root access to the Docker Socket. 
+    When utilizing {{versions['server-pro-short']}} with Sandbox Compiles, it's **important** to note that the application requires root access to the Docker socket. 
 
-## The Overleaf Toolkit
+## The {{ versions['toolkit-full'] }} ##
 
-The Overleaf Toolkit depends on the following programs:
+The {{ versions['toolkit-short'] }} depends on the following programs:
 
 - bash
 - Docker
 
 `docker compose` is required and is generally installed with Docker.
 
-We recommend that you install the most recent version of docker that is available for your operating system.
+We recommend that you install the most recent version of Docker that is available for your operating system.
 
-Once docker is installed correctly, you should be able to run these commands without error:
+Once Docker is installed correctly, you should be able to run these commands without error:
 
 ```
-# Shows the installed docker version
+# Shows the installed Docker version
 $ docker --version
 
 Docker version 24.0.5, build ced0996
 
-# Shows the installed docker compose version
+# Shows the installed Docker compose version
 $ docker compose version
 
 Docker Compose version v2.20.2

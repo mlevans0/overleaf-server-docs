@@ -24,7 +24,7 @@ Inside the Overleaf container, the software runs as a set of microservices, mana
 
 ## The MongoDB and Redis Containers
 
-Overleaf depends on two external databases: MongoDB and Redis. By default, the {{ versions['toolkit-short'] }} will provision a container for each of these databases, in addition to the Overleaf container, for a total of three docker containers.
+Overleaf depends on two external databases: MongoDB and Redis. By default, the {{ versions['toolkit-short'] }} will provision a container for each of these databases, in addition to the Overleaf container, for a total of three Docker containers.
 
 !!! tip
 
