@@ -4,7 +4,7 @@ theme:
   language: en
   name: material
   favicon: assets/favicon.ico
-  logo: assets/overleaf-o-white.svg
+  logo: assets/overleaf-logo-white.svg
   palette: 
     - media: "(prefers-color-scheme: light)"
       scheme: default
@@ -30,6 +30,19 @@ theme:
 plugins:
   - search
   - markdownextradata
+  - glightbox:
+      touchNavigation: true
+      loop: false
+      effect: zoom
+      slide_effect: slide
+      width: 100%
+      height: auto
+      zoomable: true
+      draggable: true
+      skip_classes:
+        - custom-skip-class-name
+      auto_caption: false
+      caption_position: bottom
 extra:
   generator: true
   versions:
@@ -42,11 +55,18 @@ extra:
     copyright: Overleaf part of Digital Science
     latest-two-point-releases-of-current-version: 4.1.0 and 4.1.1
     last-released-point-release-of-previous-major-version: 3.5.11
+extra_css:
+  - assets/extra.css
 markdown_extensions:
   - md_in_html
   - admonition
   - toc:
       permalink: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
 nav:
   - Home: 
     - Welcome: index.md
@@ -58,17 +78,22 @@ nav:
     - Overleaf microservices: getting-started/microservices.md
   - Installation: 
     - Using the Overleaf Toolkit: installation/using-the-toolkit.md
-  - Configuration:
-    - configuration/index.md
-    - LDAP: setup/changing-the-colors.md
-    - SSO:
-      - setup/extensions/index.md
-      - Azure: setup/extensions/python-markdown.md
-      - Okta: setup/extensions/python-markdown.md
-  - Administration: 
-    - administration.md
-    - Using the Overleaf Toolkit: administration/using-the-toolkit.md
-  - Release notes: release-notes.md
-  - How to upgrade: upgrade.md
-  - Troubleshooting: troubleshooting.md
+    # - Using Docker Compose: installation/using-docker-compose.md
+    - Post-installation tasks: installation/post-installation-tasks.md
+  - Configuration: 
+    - Overleaf Toolkit: 
+      - configuration/overleaf-toolkit.md
+      - TLS Proxy: configuration/tls-proxy.md
+      - Server Pro: 
+        - Getting Server Pro: configuration/getting-server-pro.md
+        - LDAP/AD: configuration/ldap.md
+        - SAML2: configuration/saml2.md
+    - Run commands: configuration/run-commands.md
+    - Environment Variables: configuration/environment-variables.md
+#  - Administration: 
+#    - administration.md
+#    - Using the Overleaf Toolkit: administration/using-the-toolkit.md
+#  - Release notes: release-notes.md
+#  - How to upgrade: upgrade.md
+#  - Troubleshooting: troubleshooting.md
   

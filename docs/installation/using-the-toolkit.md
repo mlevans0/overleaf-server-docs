@@ -2,7 +2,7 @@
 
 The {{ versions['toolkit-full'] }} is the recommended way to deploy and manage Overleaf {{ versions['community-edition-short'] }} and {{ versions['server-pro-short'] }} instances. 
 
-In this section we will guide you through downloading the {{ versions['toolkit-short'] }} from GitHub, familiarizing yourself with Toolkit commands and configuring some basic settings.
+In this section we will guide you through downloading the {{ versions['toolkit-short'] }} from GitHub, familiarizing yourself with some of the {{ versions['toolkit-short'] }}'s commands and configuring some basic settings. By the end of this page you should have a running {{ versions['community-edition-full'] }} instance.
 
 ## Downloading the {{ versions['toolkit-short'] }}
 
@@ -97,3 +97,34 @@ If everything was successfully initialized you should see three configuration fi
 
 Before we start your Overleaf instance for the first time we're going to update the `config/variables.env` configuration file with your custom information.
 
+Open the `config/variables.env` file using your favourite text editor and update each of the following environment variables with the required information.
+
+| Name | Description | Example |
+| ---- | ----------- | ------- |
+| `SHARELATEX_SITE_URL` | Where your instance of Overleaf is publicly available. This is used in public links, and when connecting over websockets, so **must be configured correctly**! | https://overleaf.lilliput.com
+| `SHARELATEX_EMAIL_FROM_ADDRESS` | This email address will be used as the `from` address for all outgoing emails. | no-reply@lilliput.com
+| `SHARELATEX_ADMIN_EMAIL` | The email address where users can reach the person who runs the site. | it-services@lilliput.com
+
+Once you have updated these environment variables, save and quit - we're ready to start your instance for the first time.
+
+To start your instance run the following command:
+
+```
+bin/up
+```
+
+This command will download all the required images, create the containers (using your customizations) and start up the instance. You should see some log output from the various Docker containers. You can start them up again (without attaching to the log output) by running `bin/start`.
+
+!!! info
+
+    The {{ versions['toolkit-full'] }} uses `docker compose`` to manage the Overleaf Docker containers. The {{ versions['toolkit-short'] }} provides a set of scripts which wrap `docker compose``, and takes care of most of the details for you.
+
+If all goes well, you should be able view the log in page for your new Overleaf instance by navigating to [http://127.0.0.1/](http://127.0.0.1/) or [http://localhost/](http://localhost/) in your browser.
+
+![An image of the Overleaf login screen with username and password fields, a 'Login' button and a 'Forgot your password?' link.](/assets/log-in-page.png "Overleaf log in page")
+
+!!! warning
+
+    Depending on your network configuration and where your Overleaf instance is being hosted you may need to make some additional configuration changes. See the [Configuration](/configuration) section for more details.
+
+That's it for the initial part of installation. You can now move onto the [Post installation tasks](/installation/post-installation-tasks/) where you'll [Create your first administrator account](/installation/post-installation-tasks/#creating-your-first-administrator-account) and [First example project](/installation/post-installation-tasks/#creating-your-first-example-project).
