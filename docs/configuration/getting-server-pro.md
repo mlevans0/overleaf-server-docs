@@ -9,7 +9,7 @@ First use your {{ versions['server-pro-short'] }} credentials to log in to quay.
 ```
 docker login quay.io
 Username: <sharelatex+your_key_name>
-Password: <your key>
+Password: <your_key>
 ```
 
 Then run `bin/docker-compose pull` to pull the image from the `quay.io` registry.

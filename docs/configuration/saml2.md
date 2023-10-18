@@ -1,6 +1,8 @@
-Available in Overleaf Server Pro is the ability to use a SAML server to manage users.
+{{ versions['server-pro-short'] }} provides SAML2 server integration for user authentication. For {{ versions['toolkit-short'] }} deployments, the SAML2 integration is configured via the [`variables.env`](/configuration/overleaf-toolkit#the-variablesenv-file) file.
 
-SAML is configured in the Toolkit via [`variables.env`](/configuration/overleaf-toolkit#the-variablesenv-file).
+## Configuration
+
+Internally, the Overleaf SAML integration uses the [passport-SAML](https://github.com/vesse/passport-saml) library. Most of these configuration options are passed through to the `server` config object which is used to configure `passport-SAML`. If you are having issues configuring SAML, it is worth reading the README for `passport-SAML` to get a feel for the configuration it expects.
 
 The `EXTERNAL_AUTH` variable must be set to `saml`, to enable the SAML module:
 
@@ -8,13 +10,14 @@ The `EXTERNAL_AUTH` variable must be set to `saml`, to enable the SAML module:
 EXTERNAL_AUTH=saml
 ```
 
-(To preserve backward compatibility with older configuration files, if
-`EXTERNAL_AUTH` is not set, but `SHARELATEX_SAML_ENTRYPOINT` is set, then the SAML
-module will be activated. We still recommend setting `EXTERNAL_AUTH` explicitly)
+You can see a full list of available configuration options over on the [Environments variables](environment-variables/#saml2) page. 
 
-The [Developer wiki](https://github.com/overleaf/overleaf/wiki/Server-Pro:-SAML-Config) contains further documentation on the available Environment Variables and other configuration elements. 
+!!! note
 
-## Example
+    To preserve backward compatibility with older configuration files, if `EXTERNAL_AUTH` is not set, but `SHARELATEX_SAML_ENTRYPOINT` is set, then the SAML
+    module will be activated. We still recommend setting `EXTERNAL_AUTH` explicitly
+
+## Example configuration ##
 
 At Overleaf, we test the SAML integration against a SAML test server. The following is an example of a working configuration:
 

@@ -17,7 +17,7 @@ This directory is **excluded** from the git revision control system, so it will 
 
 The `config/overleaf.rc` file contains the most important **top level** configuration settings used by the {{ versions['toolkit-short'] }}. It contains statements that set variables, in the format `VARIABLE_NAME=value`.
 
-To see a breakdown of all available configuration options see our [Run commands](run-commands.md) section.
+To see a breakdown of all available configuration options see our [{{ versions['toolkit-short'] }} settings](toolkit-settings.md) section.
 
 ### The `variables.env` File ##
 

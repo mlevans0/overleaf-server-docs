@@ -83,13 +83,13 @@ nav:
   - Configuration: 
     - Overleaf Toolkit: 
       - configuration/overleaf-toolkit.md
+      - Toolkit settings: configuration/toolkit-settings.md
       - TLS Proxy: configuration/tls-proxy.md
       - Server Pro: 
         - Getting Server Pro: configuration/getting-server-pro.md
         - LDAP/AD: configuration/ldap.md
         - SAML2: configuration/saml2.md
-    - Run commands: configuration/run-commands.md
-    - Environment Variables: configuration/environment-variables.md
+    - Environment variables: configuration/environment-variables.md
 #  - Administration: 
 #    - administration.md
 #    - Using the Overleaf Toolkit: administration/using-the-toolkit.md

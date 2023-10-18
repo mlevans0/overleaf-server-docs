@@ -39,14 +39,14 @@ ls -l
 If everything was cloned successfully you should see something like this:
 
 ```
-drwxr-xr-x 3 root root  4096 Aug 30 14:16 bin
--rw-r--r-- 1 root root  6465 Aug 30 14:16 CHANGELOG.md
-drwxr-xr-x 2 root root  4096 Sep  6 12:43 config
-drwxr-xr-x 5 root root  4096 Aug 30 14:22 data
-drwxr-xr-x 3 root root  4096 Aug 30 14:16 doc
-drwxr-xr-x 3 root root  4096 Aug 30 14:16 lib
--rw-r--r-- 1 root root 34520 Aug 30 14:16 LICENSE
--rw-r--r-- 1 root root  1178 Aug 30 14:16 README.md
+drwxr-xr-x 3 fry fry  4096 Aug 30 14:16 bin
+-rw-r--r-- 1 fry fry  6465 Aug 30 14:16 CHANGELOG.md
+drwxr-xr-x 2 fry fry  4096 Sep  6 12:43 config
+drwxr-xr-x 5 fry fry  4096 Aug 30 14:22 data
+drwxr-xr-x 3 fry fry  4096 Aug 30 14:16 doc
+drwxr-xr-x 3 fry fry  4096 Aug 30 14:16 lib
+-rw-r--r-- 1 fry fry 34520 Aug 30 14:16 LICENSE
+-rw-r--r-- 1 fry fry  1178 Aug 30 14:16 README.md
 ```
 
 !!! note
@@ -105,7 +105,7 @@ Open the `config/variables.env` file using your favourite text editor and update
 | `SHARELATEX_EMAIL_FROM_ADDRESS` | This email address will be used as the `from` address for all outgoing emails. | no-reply@lilliput.com
 | `SHARELATEX_ADMIN_EMAIL` | The email address where users can reach the person who runs the site. | it-services@lilliput.com
 
-Once you have updated these environment variables, save and quit - we're ready to start your instance for the first time.
+Once you have updated these environment variables, save and quit - you're now ready to start your instance for the first time.
 
 To start your instance run the following command:
 
@@ -117,11 +117,11 @@ This command will download all the required images, create the containers (using
 
 !!! info
 
-    The {{ versions['toolkit-full'] }} uses `docker compose`` to manage the Overleaf Docker containers. The {{ versions['toolkit-short'] }} provides a set of scripts which wrap `docker compose``, and takes care of most of the details for you.
+    The {{ versions['toolkit-full'] }} uses `docker compose` to manage the Overleaf Docker containers. The {{ versions['toolkit-short'] }} provides a set of scripts which wrap `docker compose`, and takes care of most of the details for you.
 
 If all goes well, you should be able view the log in page for your new Overleaf instance by navigating to [http://127.0.0.1/](http://127.0.0.1/) or [http://localhost/](http://localhost/) in your browser.
 
-![An image of the Overleaf login screen with username and password fields, a 'Login' button and a 'Forgot your password?' link.](/assets/log-in-page.png "Overleaf log in page")
+![An image of the Overleaf login screen with username and password fields, a 'Login' button and a 'Forgot your password?' link.](../assets/log-in-page.png "Overleaf log in page")
 
 !!! warning
 
