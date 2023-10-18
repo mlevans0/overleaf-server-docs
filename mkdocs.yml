@@ -81,7 +81,7 @@ nav:
     # - Using Docker Compose: installation/using-docker-compose.md
     - Post-installation tasks: installation/post-installation-tasks.md
   - Configuration: 
-    - Overleaf Toolkit: 
+    - Using the Overleaf Toolkit: 
       - configuration/overleaf-toolkit.md
       - Toolkit settings: configuration/toolkit-settings.md
       - TLS Proxy: configuration/tls-proxy.md
