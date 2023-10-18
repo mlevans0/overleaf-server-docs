@@ -10,7 +10,7 @@ The `EXTERNAL_AUTH` variable must be set to `saml`, to enable the SAML module:
 EXTERNAL_AUTH=saml
 ```
 
-You can see a full list of available configuration options over on the [Environments variables](environment-variables/#saml2) page. 
+You can see a full list of available configuration options over on the [Environments variables](environment-variables.md#saml2) page. 
 
 !!! note
 

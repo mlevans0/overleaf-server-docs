@@ -10,7 +10,7 @@ To enable LDAP authentication the `EXTERNAL_AUTH` variable **must** be set to `l
 EXTERNAL_AUTH=ldap
 ```
 
-You can see a full list of available configuration options over on the [Environments variables](environment-variables/#ldap) page. 
+You can see a full list of available configuration options over on the [Environments variables](environment-variables.md#ldapad) page. 
 
 After bootstrapping {{ versions['server-pro-short'] }} for the first time with LDAP authentication, an existing LDAP user must be given admin permissions by visiting the `/launchpad` page (or [via CLI](https://github.com/overleaf/overleaf/wiki/Creating-and-managing-users#creating-the-first-admin-user), but in this case ignoring password confirmation). 
 
