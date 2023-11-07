@@ -1,3 +1,8 @@
+---
+tags:
+  - Server Pro
+---
+
 {{ versions['server-pro-short'] }} provides SAML2 server integration for user authentication. For {{ versions['toolkit-short'] }} deployments, the SAML2 integration is configured via the [`variables.env`](/configuration/overleaf-toolkit#the-variablesenv-file) file.
 
 ## Configuration

@@ -1,3 +1,8 @@
+---
+tags:
+  - Server Pro
+---
+
 ## Obtaining {{ versions['server-pro-short'] }} Image ##
 
 {{ versions['server-pro-short'] }} is distributed as a Docker image on the [quay.io](https://quay.io) registry: `quay.io/sharelatex/sharelatex-pro`

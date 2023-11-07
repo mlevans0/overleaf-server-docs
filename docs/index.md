@@ -10,19 +10,13 @@ Overleaf is a powerful tool that facilitates collaborative authoring and publish
 
 Whether you're an administrator setting up Overleaf for your organization or a user looking to leverage Overleaf's collaborative features for document creation for your lab, this documentation will walk you through the necessary steps to install, configure, and utilize {{ versions['community-edition-short'] }} and {{ versions['server-pro-short'] }} as an on-premise solution.
 
+## What is the difference between {{ versions['server-pro-short'] }} and {{ versions['community-edition-short'] }}?
 
-
-## What is the difference between {{ versions['community-edition-short'] }} and {{ versions['server-pro-short'] }}?
-
-Overleaf has two on-premise solutions - {{ versions['community-edition-short'] }} and {{ versions['server-pro-short'] }}. Both versions run in Docker containers, isolating them from other applications on the same host. This provides an additional layer of security by preventing potential cross-application attacks. They have also been designed to run on air-gapped servers, which means they can be completely isolated from other networks, including the Internet. Docker provides tooling for transferring the application from an internet-connected to an air-gapped environment. After the initial download, no internet connection is required, significantly reducing the risk of external threats.
+Overleaf has two on-premise solutions - {{ versions['server-pro-short'] }} and {{ versions['community-edition-short'] }}. Both versions run in Docker containers, isolating them from other applications on the same host. This provides an additional layer of security by preventing potential cross-application attacks. They have also been designed to run on air-gapped servers, which means they can be completely isolated from other networks, including the Internet. Docker provides tooling for transferring the application from an internet-connected to an air-gapped environment. After the initial download, no internet connection is required, significantly reducing the risk of external threats.
 
 Finally, Overleaf expedites security patches when updates for dependencies become available. This ensures any potential vulnerabilities can be addressed quickly. 
 
-### {{ versions['community-edition-short'] }} 
-
-{{ versions['community-edition-short'] }} is a lite version of our LaTeX editing platform which can be freely [self-installed](https://github.com/overleaf/overleaf) and {{ versions['server-pro-short'] }} is our full, officially supported, premium service. {{ versions['server-pro-short'] }} is an excellent option for enterprise organizations that are looking for the ease and functionality of the Overleaf platform, but require full control of the infrastructure in which the application runs.
-
-### {{ versions['server-pro-short'] }} 
+### {{ versions['server-pro-short'] }} ###
 
 {{ versions['server-pro-short'] }} comes as a Docker container and is a drop in replacement for {{ versions['community-edition-short'] }}. {{ versions['server-pro-short'] }} includes features such as SSO provided via LDAP and SAML2, improved security, tracked changes, comments, our optimized version of TexLive, visual editor mode, templates and admin panel. 
 
@@ -33,6 +27,10 @@ You can find more information about {{ versions['server-pro-short'] }} for enter
 !!! info
 
     We recommend enterprise organizations begin with {{ versions['community-edition-short'] }} to familiarize themselves with the platform's requirements and ensure a smooth experience before considering an upgrade to {{ versions['server-pro-short'] }}.
+
+### {{ versions['community-edition-short'] }} ###
+
+{{ versions['community-edition-short'] }} is a lite version of our LaTeX editing platform which can be freely [self-installed](https://github.com/overleaf/overleaf) and {{ versions['server-pro-short'] }} is our full, officially supported, premium service. {{ versions['server-pro-short'] }} is an excellent option for enterprise organizations that are looking for the ease and functionality of the Overleaf platform, but require full control of the infrastructure in which the application runs.
 
 ### Support 
 

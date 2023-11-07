@@ -1,4 +1,4 @@
-An optional TLS proxy for terminating https connections, based on NGINX.
+An optional TLS proxy for terminating HTTPS connections, based on NGINX.
 
 Run `bin/init --tls` to initialise local configuration with NGINX proxy configuration, or to add NGINX proxy configuration to an existing local configuration. A sample private key is created in `config/nginx/certs/overleaf_key.pem` and a dummy certificate in `config/nginx/certs/overleaf_certificate.pem`. Either replace these with your actual private key and certificate, or set the values of the `TLS_PRIVATE_KEY_PATH` and `TLS_CERTIFICATE_PATH` variables to the paths of your actual private key and certificate respectively.
 
@@ -24,7 +24,7 @@ TLS_PORT=443
 ```
 In order to run the proxy, change the value of the `NGINX_ENABLED` variable in `config/overleaf.rc` from `false` to `true` and re-run `bin/up`.
 
-By default the https web interface will be available on `https://127.0.1.1:443`. Connections to `http://127.0.1.1:80` will be redirected to `https://127.0.1.1:443`. To change the IP address that NGINX listens on, set the `NGINX_HTTP_LISTEN_IP` and `NGINX_TLS_LISTEN_IP` variables. The ports can be changed via the `NGINX_HTTP_PORT` and `TLS_PORT` variables.
+By default the HTTPS web interface will be available on `https://127.0.1.1:443`. Connections to `http://127.0.1.1:80` will be redirected to `https://127.0.1.1:443`. To change the IP address that NGINX listens on, set the `NGINX_HTTP_LISTEN_IP` and `NGINX_TLS_LISTEN_IP` variables. The ports can be changed via the `NGINX_HTTP_PORT` and `TLS_PORT` variables.
 
 If NGINX fails to start with the error message `Error starting userland proxy: listen tcp4 ... bind: address already in use` ensure that `SHARELATEX_LISTEN_IP:SHARELATEX_PORT` does not overlap with `NGINX_HTTP_LISTEN_IP:NGINX_HTTP_PORT`.
 
@@ -35,6 +35,7 @@ sequenceDiagram
     participant internal as Host Internal
     participant nginx as nginx
     participant sharelatex as sharelatex
+    participant git-bridge as git-bridge
     %% User connects to external host HTTP
     user->>+ external: HTTP
     note over external: NGINX_HTTP_LISTEN_IP:NGINX_HTTP_PORT
@@ -53,4 +54,10 @@ sequenceDiagram
     note over internal: SHARELATEX_LISTEN_IP:SHARELATEX_PORT
     internal->>+sharelatex: HTTP
     note over sharelatex: sharlatex:80
+    %% sharelatex connects to git-bridge
+    sharelatex->>+git-bridge: HTTP /git/
+    note over git-bridge: git-bridge:8000
+    note over sharelatex: GIT_BRIDGE_HOST:GIT_BRIDGE_PORT
+    git-bridge->>+sharelatex: WEB/WEB-API:3000
+    git-bridge->>+sharelatex: HISTORY-V1:3100
 ```

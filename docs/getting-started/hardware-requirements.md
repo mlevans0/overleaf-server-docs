@@ -51,20 +51,22 @@ Additionally {{versions['server-pro-short']}} can specify reasonable timeouts on
 
 By default, Overleaf Server instance limit the number of connections to 768. This includes persistent Websocket connections, top-level HTML navigation and ajax requests. Once the limit is hit, the editor might not be able to connect, the editor page might not load entirely and compile requests can fail. Nginx will return status 500 responses and log `worker_connections are not enough while connecting to upstream` into `var/log/nginx/error`.log inside the `sharelatex` container.
 
-The [`worker_connections`](https://nginx.org/en/docs/ngx_core_module.html#worker_connections) setting limits the number of concurrent connections nginx will accept per worker. The number of workers is controlled by the `worker_processes` setting and is set to 4 by default in our nginx configuration.
+The [`worker_connections`](https://nginx.org/en/docs/ngx_core_module.html#worker_connections) setting limits the number of concurrent connections nginx will accept per worker. The number of workers is controlled by the [`worker_processes`](https://nginx.org/en/docs/ngx_core_module.html#worker_processes) setting and is set to 4 by default in our nginx configuration.
 
 Nginx doesn't do much work compared to other parts of the system, so these limits act as a safety preventing too many connections from overwhelming the system. It's preferable to drop some excess connections early rather than slowing down every connection.
 
-Overleaf Server instances exposes environment variables for adjusting these nginx settings:
+Overleaf Server instances expose environment variables for adjusting these nginx settings:
 
 - `NGINX_WORKER_PROCESSES` for [`worker_processes`](https://nginx.org/en/docs/ngx_core_module.html#worker_processes) (default `4`)
 - `NGINX_WORKER_CONNECTIONS` for [`worker_connections`](https://nginx.org/en/docs/ngx_core_module.html#worker_connections) (default `768`)
 - `NGINX_KEEPALIVE_TIMEOUT` for [`keepalive_timeout`](https://nginx.org/en/docs/http/ngx_http_core_module.html#keepalive_timeout) (default `65`)
 
-When running another proxy in front of the `sharelatex` container (e.g. for TLS termination), the `NGINX_KEEPALIVE_TIMEOUT` in the Overleaf Server instance needs to be larger than the previous proxy. E.g. with another nginx process on the Docker host "nginx-host", here are two examples: 
+!!! note
+    
+    When running another proxy in front of the `sharelatex` container (e.g. for TLS termination), the `NGINX_KEEPALIVE_TIMEOUT` in the Overleaf Server instance needs to be larger than the previous proxy. E.g. with another nginx process on the Docker host **nginx-host**, here are two examples: 
         
-- default value `NGINX_KEEPALIVE_TIMEOUT`, use [`keepalive_timeout 60s`](https://nginx.org/en/docs/http/ngx_http_upstream_module.html#keepalive_timeout) (default value in upstream) in "nginx-host"
-- custom value `NGINX_KEEPALIVE_TIMEOUT=100s`, use []`keepalive_timeout 90s`](https://nginx.org/en/docs/http/ngx_http_upstream_module.html#keepalive_timeout) (custom value in upstream) in "nginx-host"
+    - Default value `NGINX_KEEPALIVE_TIMEOUT`, use [`keepalive_timeout 60s`](https://nginx.org/en/docs/http/ngx_http_upstream_module.html#keepalive_timeout) (default value in upstream) in **nginx-host**
+    - Custom value `NGINX_KEEPALIVE_TIMEOUT=100s`, use [`keepalive_timeout 90s`](https://nginx.org/en/docs/http/ngx_http_upstream_module.html#keepalive_timeout) (custom value in upstream) in **nginx-host**
 
 ## CPU speed
 

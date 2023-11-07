@@ -1,3 +1,8 @@
+---
+tags:
+  - Server Pro
+---
+
 {{ versions['server-pro-short'] }} provides LDAP server integration for user authentication and is compatible with Active Directory systems. For {{ versions['toolkit-short'] }} deployments, the LDAP integration is configured via the [`variables.env`](/configuration/overleaf-toolkit#the-variablesenv-file) file
 
 ## Configuration

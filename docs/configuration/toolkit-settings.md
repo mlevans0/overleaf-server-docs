@@ -1,3 +1,13 @@
+<style>
+table th:first-of-type {
+    width: 40%;
+    word-break: break-all;
+}
+table th:nth-of-type(2) {
+    width: 60%;
+}
+</style>
+
 This document describes the variables that are supported in the `config/overleaf.rc` file for {{ versions['toolkit-short'] }} deployments.
 
 The `config/overleaf.rc` file consists of variable definitions in the form `NAME=value` , lines beginning with `#` are treated as comments.
@@ -37,7 +47,7 @@ The `config/overleaf.rc` file consists of variable definitions in the form `NAME
 | `REDIS_PORT` | Specifies the Redis port to use when `REDIS_ENABLED` is `false`<br /><br />- **Default**: not set |
 | `REDIS_DATA_PATH` | Sets the path to the directory that will be mounted into the `redis` container, and used to store the Redis database. This can be either a full path beginning with a `/`), or relative to the base directory of the {{ versions['toolkit-short'] }}. This option only affects the local `redis` container that is created when `REDIS_ENABLED` is `true`.<br /><br />- **Default**: `data/redis` |
 
-### `nginix` ###
+### `nginx` ###
 
 | Name | Description |
 |------|-------------|

@@ -18,6 +18,9 @@ theme:
       toggle:
         icon: material/brightness-4
         name: Switch to light mode
+  icon:
+    tag:
+      server_pro: fontawesome/solid/tag
   features:
     - search.share
     - navigation.tabs
@@ -27,9 +30,12 @@ theme:
     - content.code.copy
     - content.code.select
     - content.code.annotate
+    - navigation.expand
 plugins:
   - search
   - markdownextradata
+  - tags:
+      enabled: true
   - glightbox:
       touchNavigation: true
       loop: false
@@ -55,6 +61,8 @@ extra:
     copyright: Overleaf part of Digital Science
     latest-two-point-releases-of-current-version: 4.1.0 and 4.1.1
     last-released-point-release-of-previous-major-version: 3.5.11
+  tags:
+    Server Pro: server_pro
 extra_css:
   - assets/extra.css
 markdown_extensions:
@@ -84,7 +92,9 @@ nav:
     - Using the Overleaf Toolkit: 
       - configuration/overleaf-toolkit.md
       - Toolkit settings: configuration/toolkit-settings.md
+      - Branding: configuration/branding.md
       - TLS Proxy: configuration/tls-proxy.md
+      - Configuring email: configuration/email.md
       - Server Pro: 
         - Getting Server Pro: configuration/getting-server-pro.md
         - LDAP/AD: configuration/ldap.md

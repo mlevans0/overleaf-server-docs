@@ -17,7 +17,6 @@ The {{ versions['toolkit-full'] }} runs your instance inside a Docker container,
 Inside the Overleaf container, the software runs as a set of microservices, managed by `runit`. Some of the more interesting files inside the container are:
 
 - `/etc/service/`: initialization files for the microservices.
-- `/etc/sharelatex/settings.coffee`: unified settings file for the microservices.
 - `/var/log/sharelatex/`: logs for each microservice.
 - `/var/www/sharelatex/`: code for the various microservices.
 - `/var/lib/sharelatex/`: the mount-point for persistent data (corresponds to the directory indicated by `SHARELATEX_DATA_PATH` on the host).
