@@ -35,6 +35,16 @@ These environment variables are compatible with {{ versions['community-edition-s
 | `SHARELATEX_FPH_DISPLAY_NEW_PROJECTS` | set to `'false'` to prevent new projects from displaying Full Project History instead of the legacy history (since 3.5.0) |
 | `ENABLE_CRON_RESOURCE_DELETION` | Set this environment variable to `true` to enable the automatic clean-up of deleted projects and users after 90 days. |
 
+## Password restrictions ##
+
+It is possible to enforce password restrictions on users when using the Overleaf login system (local accounts), not an SSO option such as LDAP. For SSO accounts, password policies will be enforced by your identity provider or directory service, additionally allowing support for multi-factor authentication. 
+
+| Name | Description |
+|------|-------------|
+| `SHARELATEX_PASSWORD_VALIDATION_MIN_LENGTH` | The minimum length required |
+| `SHARELATEX_PASSWORD_VALIDATION_MAX_LENGTH` | The Maximum length allowed |
+| `SHARELATEX_PASSWORD_VALIDATION_PATTERN` | is used to validate password strength<br /><br /><strong>Example</strong><br />- `abc123` – password requires 3 letters and 3 numbers and be at least 6 characters long<br />- `aA` – password requires lower and uppercase letters and be 2 characters long<br />- `ab$3` – it must contain letters, digits and symbols and be 4 characters long<br /> <strong>Note:</strong> There are 4 groups of characters: letters, UPPERcase letters, digits, symbols. Everything that is neigher letter, nor digit is considered to be a symbol.
+
 ## {{ versions['server-pro-short'] }} only ##
 
 The environment variables listed below are only compatible with {{ versions['server-pro-short'] }} and can be used with both {{ versions['toolkit-short'] }} and Docker Compose deployments.
@@ -67,7 +77,7 @@ The environment variables listed below are only compatible with {{ versions['ser
 | `SHARELATEX_LDAP_TLS_OPTS_CA_PATH` | A JSON array of paths to the CA file for TLS, must be accessible to the Docker container. E.g. `-env SHARELATEX_LDAP_TLS_OPTS_CA_PATH='["/var/one.pem", "/var/two.pem"]'` |
 | `SHARELATEX_LDAP_TLS_OPTS_REJECT_UNAUTH` | If `true`, the server certificate is verified against the list of supplied CAs.|
 
-### SAML2 ###
+### SAML 2.0 ###
 
 | Name | Description |
 |------|-------------|
@@ -94,7 +104,7 @@ The environment variables listed below are only compatible with {{ versions['ser
 | `SHARELATEX_SAML_FORCE_AUTHN ` | If `true`, the initial SAML request from the service provider specifies that the IdP should force re-authentication of the user, even if they possess a valid session. |
 | `SHARELATEX_SAML_DISABLE_REQUESTED_AUTHN_CONTEXT` | If `true`, do not request a specific auth context. For example, you can this this to `true` to allow additional contexts such as password-less logins (`urn:oasis:names:tc:SAML:2.0:ac:classes:X509`). Support for additional contexts is dependant on your IdP. |
 | `SHARELATEX_SAML_SKIP_REQUEST_COMPRESSION ` | If set to `true`, the SAML request from the service provider won't be compressed. |
-| `SHARELATEX_SAML_AUTHN_REQUEST_BINDING` | If set to `HTTP-POST`, will request authentication from IDP via HTTP POST binding, otherwise defaults to HTTP Redirect |
+| `SHARELATEX_SAML_AUTHN_REQUEST_BINDING` | If set to `HTTP-POST`, will request authentication from IDP via HTTP POST binding, otherwise defaults to HTTP Redirect<br /><br /><strong>Note:</strong> If `SHARELATEX_SAML_AUTHN_REQUEST_BINDING` is set to `HTTP-POST`, then `SHARELATEX_SAML_SKIP_REQUEST_COMPRESSION` must also be set to `true`.|
 | `SHARELATEX_SAML_VALIDATE_IN_RESPONSE_TO` | If truthy, then `InResponseTo` will be validated from incoming SAML responses |
 | `SHARELATEX_SAML_REQUEST_ID_EXPIRATION_PERIOD_MS` | Defines the expiration time when a Request ID generated for a SAML request will not be valid if seen in a SAML response in the `InResponseTo` field.  **Default** is `8` hours. |
 | `SHARELATEX_SAML_CACHE_PROVIDER` | Defines the implementation for a cache provider used to store request Ids generated in SAML requests as part of `InResponseTo` validation. **Default** is a built-in in-memory cache provider. <br /><br />See [link](https://github.com/node-saml/passport-saml/blob/master/README.md) for more information. |

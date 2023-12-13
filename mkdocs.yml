@@ -53,7 +53,7 @@ extra:
   generator: true
   versions:
     community-edition-full: Overleaf Community Edition
-    community-edition-short: Community Edition
+    community-edition-short: Server CE
     server-pro-full: Overleaf Server Pro
     server-pro-short: Server Pro
     toolkit-full: Overleaf Toolkit
@@ -98,7 +98,8 @@ nav:
       - Server Pro: 
         - Getting Server Pro: configuration/getting-server-pro.md
         - LDAP/AD: configuration/ldap.md
-        - SAML2: configuration/saml2.md
+        - SAML 2.0: configuration/saml2.md
+        - Templates system: configuration/templates-system.md
     - Environment variables: configuration/environment-variables.md
 #  - Administration: 
 #    - administration.md
