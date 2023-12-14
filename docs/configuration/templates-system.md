@@ -3,13 +3,13 @@ tags:
   - Server Pro
 ---
 
-With {{ versions['server-pro-short'] }}, you have the ability to create and publish your own templates, within your self-hosted environment, as well as being able to download a wide range of quality templates from the [Template Gallery](https://www.overleaf.com/latex/templates) on [overleaf.com](https://www.overleaf.com) and share the with your users. 
+With {{ versions['server-pro-short'] }}, you have the ability to create and publish your own templates, within your self-hosted environment, as well as re-distribute downloaded templates from the [Template Gallery](https://www.overleaf.com/latex/templates) on [overleaf.com](https://www.overleaf.com). 
 
 ## Setting up the templates user ##
 
 In {{ versions['server-pro-short'] }}, a single user is responsible for publishing the curated list of templates that are visible on your local template gallery `/templates`. 
 
-Do do this, you'll need to set the environment variable `SHARELATEX_TEMPLATES_USER_ID` in `toolkit/config/variables.env` to the `ID` of the user who will be responsible for template management within your instance, for example:
+To do this, you'll need to set the environment variable `SHARELATEX_TEMPLATES_USER_ID` in `toolkit/config/variables.env` to the `ID` of the user who will be responsible for template management within your instance, for example:
 
 ```bash
 SHARELATEX_TEMPLATES_USER_ID=56a8865231faeb5f07d69959
@@ -58,7 +58,7 @@ Once this has been done, the template should have been removed from the template
 
 ### Your gallery ###
 
-On the templates gallery page, `/templates`, templates are grouped together using the tag which the user assigns to the projects, e.g. Journals, Reports etc. To see all templates add `/all` to the URL `/templates/all`, which can also be used as the default URL if you do not wish to use the folder for grouping. 
+On the templates gallery page, `/templates`, templates are grouped together using the tag which the user assigns to the projects, e.g. Journals, Reports etc. To see all templates add `/all` to the URL `/templates/all`, which can also be used as the default URL if you do not wish to use tags for groupings.
 
 Like-wise, you can view/link to templates within a specific category by appending the tag name to the templates URL, for example: `/templates/journals`.
 
@@ -96,3 +96,18 @@ You can find additional information about configuring what TeXLive versions user
 !!! note
 
     Once you've switched to using [Sandbox Compiles](sandboxed-compiles.md) it'll take a little while for the new images to be downloaded by the container (this only happens once per image), during this time compiles will be unavailable.
+
+If you'd like to re-distribute a template from the [Template Gallery](https://www.overleaf.com/latex/templates) on [overleaf.com](https://www.overleaf.com), or if one of your users would like to use one for their own project, the steps are as follows:
+
+1. Navigate to the [Template Gallery](https://www.overleaf.com/latex/templates) on [overleaf.com](https://www.overleaf.com) and locate the required template, for example [IEEE Photonics Journal Paper Template - Example Submission](https://www.overleaf.com/latex/examples/ieee-photonics-journal-paper-template-example-submission/bsfjjfkdsjds)
+1. Click on the **Open as Template** button
+1. Click on the project menu and choose **Download Source**
+1. Next, log into the on-premise {{ versions['server-pro-short'] }} account
+1. Click the **New Project** button from the projects dashboard and choose **Upload Project**
+1. Click the **Select a .zip file** button and choose the downloaded template zip file
+
+The user can then use this newly uploaded template within their own account, or, as the templates user, you can publish it for other users to use.
+
+!!! note
+
+    An [overleaf.com](https://www.overleaf.com) account is required
