@@ -101,6 +101,8 @@ nav:
         - SAML 2.0: configuration/saml2.md
         - Templates system: configuration/templates-system.md
     - Environment variables: configuration/environment-variables.md
+    - Localization: configuration/localization.md
+    - Logging: configuration/logging.md
 #  - Administration: 
 #    - administration.md
 #    - Using the Overleaf Toolkit: administration/using-the-toolkit.md

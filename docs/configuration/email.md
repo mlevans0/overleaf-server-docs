@@ -10,31 +10,18 @@ table th:nth-of-type(2) {
 
 Overleaf supports sending email through two methods: Simple Mail Transfer Protocol (SMTP) and Amazon Simple Email Service (SES). SMTP can be used if you have an email server enabled on your localhost that is listening for local connections.
 
-## Configure
+## Configure ##
 
 Email can be configured via environmental variables passed to the Docker container.
 
-### Sender Configuration
+### Sender Configuration ###
 
 | Name | Description |
 |------|-------------|
 | `SHARELATEX_EMAIL_FROM_ADDRESS` | The from address e.g. `'support@mycompany.com'` <br /><br />- **Required**: yes |
 | `SHARELATEX_EMAIL_REPLY_TO` | The reply to address e.g. `'noreply@mycompany.com'` |
 
-### AWS SES
-
-| Name | Description |
-|------|-------------|
-| `SHARELATEX_EMAIL_AWS_SES_ACCESS_KEY_ID` | If using AWS SES the access key |
-| `SHARELATEX_EMAIL_AWS_SES_SECRET_KEY` | If using AWS SES the secret key |
-
-### AWS SES with Instance Roles
-
-| Name | Description |
-|------|-------------|
-| `SHARELATEX_EMAIL_DRIVER`: | When this is set to `ses`, the email system will rely on the configured instance roles to send email. |
-
-### SMTP
+### SMTP ###
 
 | Name | Description |
 |------|-------------|
@@ -48,7 +35,34 @@ Email can be configured via environmental variables passed to the Docker contain
 | `SHARELATEX_EMAIL_SMTP_NAME` | Optional hostname for TLS validation if `SHARELATEX_EMAIL_SMTP_HOST` was set to an IP address, defaults to hostname of the machine.|
 | `SHARELATEX_EMAIL_SMTP_LOGGER` | When `true` prints logging messages to `web.log`.|
 
-#### Customisation
+### Amazon SES SMTP interface ###
+
+You can read more about using the Amazon SES SMTP interface to send email <a href="https://docs.aws.amazon.com/ses/latest/dg/send-email-smtp.html">here</a>.
+
+| Name | Description |
+|------|-------------|
+| `SHARELATEX_EMAIL_SMTP_HOST` | The hostname or IP address to connect to. Needs to be accessible from the Docker container |
+| `SHARELATEX_EMAIL_SMTP_PORT` | The port to connect to |
+| `SHARELATEX_EMAIL_SMTP_USER` | The username that should be used to authenticate against the SMTP server |
+| `SHARELATEX_EMAIL_SMTP_PASS` | The password associated with the SMTP username |
+
+### Amazon SES API ###
+
+You can read more about using the Amazon SES API to send email <a href="https://docs.aws.amazon.com/ses/latest/dg/send-email-api.html">here</a>.
+
+| Name | Description |
+|------|-------------|
+| `SHARELATEX_EMAIL_AWS_SES_ACCESS_KEY_ID` | If using AWS SES the access key |
+| `SHARELATEX_EMAIL_AWS_SES_SECRET_KEY` | If using AWS SES the secret key |
+| `SHARELATEX_EMAIL_AWS_SES_REGION` | If not set, the default region is US-EAST-1 |
+
+### AWS SES with Instance Roles ###
+
+| Name | Description |
+|------|-------------|
+| `SHARELATEX_EMAIL_DRIVER`: | When this is set to `ses`, the email system will use the SES API method and rely on the configured instance roles to send email. |
+
+### Customisation ###
 
 | Name | Description |
 |------|-------------|
