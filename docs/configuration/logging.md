@@ -36,7 +36,7 @@ You can use the `bin/logs` script to view logs for the following services: `clsi
 You can copy log files from the main `sharelatex` container to local computer using the following command:
 
 ```
-docker cp sharelatex:/var/log/sharelatex/{server-name}.log {service-name}.log
+docker cp sharelatex:/var/log/sharelatex/{service-name}.log {service-name}.log
 ```
 
 ## Tracking project access ##
