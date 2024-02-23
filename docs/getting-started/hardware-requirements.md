@@ -10,7 +10,7 @@ A minimum base requirement of 2 cores and 3GB memory is required for basic opera
 
 !!! warning
 
-    If you are considering using a NFS (Network File System) based filesystem for your small instance please have a look at this section in the Troubleshooting page.
+    If you are considering using a NFS (Network File System) based filesystem for your small instance please have a look at this section in the [Troubleshooting](/troubleshooting/troubleshooting/) guide.
 
 ## Scaling
 

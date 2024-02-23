@@ -1,4 +1,4 @@
-## Using templates as an individual ###
+## Using templates as an individual ##
 
 If an individual user would like to use a template from the [Template Gallery](https://www.overleaf.com/latex/templates) on [overleaf.com](https://www.overleaf.com) they would need to:
 

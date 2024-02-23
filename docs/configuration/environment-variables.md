@@ -23,6 +23,7 @@ These environment variables are compatible with {{ versions['community-edition-s
 | `SHARELATEX_REDIS_PASS` | The password to use when connecting to Redis (if applicable) |
 | `SHARELATEX_NAV_TITLE` | Set the tab title of the application |
 | `SHARELATEX_SESSION_SECRET` | A random string which is used to secure tokens, if load balancing this needs to be set to the same toke across boxes. If only 1 instance is being run it does not need to be set by the user. |
+| `SHARELATEX_COOKIE_SESSION_LENGTH` | This environment variable allows you to override the default session cookie expiration time of 5 days. The override value provided should be specified in milliseconds. For example, to make the session last for 1 hour, set `COOKIE_SESSION_LENGTH=3600000`. (Added in {{ versions['server-pro-short'] }} 4.2) |
 | `SHARELATEX_BEHIND_PROXY` | Set to true if running behind a proxy like nginx/apache allowing it to correctly detect the forwarded IP address |
 | `SHARELATEX_SECURE_COOKIE` | Set this to something non-zero to use a secure cookie. Only use this if your Overleaf instance is running behind a reverse proxy with SSL configured. |
 | `SHARELATEX_RESTRICT_INVITES_TO_EXISTING_ACCOUNTS` | If set to `true`, will restrict project invites to email addresses which correspond with existing user accounts. |
@@ -30,9 +31,9 @@ These environment variables are compatible with {{ versions['community-edition-s
 | `SHARELATEX_ALLOW_ANONYMOUS_READ_AND_WRITE_SHARING` | If set to `true`, will allow anonymous users to view and edit projects shared via the new  |[link-sharing](https |//www.sharelatex.com/blog/2017/11/27/integration-update-link-sharing.html) feature. |
 | `EMAIL_CONFIRMATION_DISABLED` | When set to `true` the banner requesting email confirmation won't be displayed. |
 | `ADDITIONAL_TEXT_EXTENSIONS` | an array of strings to configure additional extensions for editable files |`ADDITIONAL_TEXT_EXTENSIONS='["abc", "xyz"]'` |
-| `SHARELATEX_STATUS_PAGE_URL` | Custom status page URL (since 3.4.0), e.g. `status.example.com` |
-| `SHARELATEX_FPH_INITIALIZE_NEW_PROJECTS` | set to `'false'` to prevent new projects from being initialised with Full Project History (since 3.5.0) |
-| `SHARELATEX_FPH_DISPLAY_NEW_PROJECTS` | set to `'false'` to prevent new projects from displaying Full Project History instead of the legacy history (since 3.5.0) |
+| `SHARELATEX_STATUS_PAGE_URL` | Custom status page URL (Added in {{ versions['server-pro-short'] }} 3.4.0), e.g. `status.example.com` |
+| `SHARELATEX_FPH_INITIALIZE_NEW_PROJECTS` | set to `'false'` to prevent new projects from being initialised with Full Project History (Added in {{ versions['server-pro-short'] }} 3.5.0) |
+| `SHARELATEX_FPH_DISPLAY_NEW_PROJECTS` | set to `'false'` to prevent new projects from displaying Full Project History instead of the legacy history (Added in {{ versions['server-pro-short'] }} 3.5.0) |
 | `ENABLE_CRON_RESOURCE_DELETION` | Set this environment variable to `true` to enable the automatic clean-up of deleted projects and users after 90 days. |
 
 ## Password restrictions ##
@@ -43,7 +44,7 @@ It is possible to enforce password restrictions on users when using the Overleaf
 |------|-------------|
 | `SHARELATEX_PASSWORD_VALIDATION_MIN_LENGTH` | The minimum length required |
 | `SHARELATEX_PASSWORD_VALIDATION_MAX_LENGTH` | The Maximum length allowed |
-| `SHARELATEX_PASSWORD_VALIDATION_PATTERN` | is used to validate password strength<br /><br /><strong>Example</strong><br />- `abc123` – password requires 3 letters and 3 numbers and be at least 6 characters long<br />- `aA` – password requires lower and uppercase letters and be 2 characters long<br />- `ab$3` – it must contain letters, digits and symbols and be 4 characters long<br /> <strong>Note:</strong> There are 4 groups of characters: letters, UPPERcase letters, digits, symbols. Everything that is neigher letter, nor digit is considered to be a symbol.
+| `SHARELATEX_PASSWORD_VALIDATION_PATTERN` | is used to validate password strength<br /><br /><strong>Example</strong><br />- `abc123` – password requires 3 letters and 3 numbers and be at least 6 characters long<br />- `aA` – password requires lower and uppercase letters and be 2 characters long<br />- `ab$3` – it must contain letters, digits and symbols and be 4 characters long<br /> <strong>Note:</strong> There are 4 groups of characters: letters, UPPERcase letters, digits, symbols. Everything that is neither letter, nor digit is considered to be a symbol.
 
 ## {{ versions['server-pro-short'] }} only ##
 

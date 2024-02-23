@@ -51,6 +51,8 @@ plugins:
       caption_position: bottom
 extra:
   generator: true
+  verbatim_strings:
+    .Image: "{{.Image}}"
   versions:
     community-edition-full: Overleaf Community Edition
     community-edition-short: Server CE
@@ -59,8 +61,8 @@ extra:
     toolkit-full: Overleaf Toolkit
     toolkit-short: Toolkit
     copyright: Overleaf part of Digital Science
-    latest-two-point-releases-of-current-version: 4.1.0 and 4.1.1
-    last-released-point-release-of-previous-major-version: 3.5.11
+    latest-two-point-releases-of-current-version: 4.2.2 and 4.2.3
+    last-released-point-release-of-previous-major-version: 3.5.15
   tags:
     Server Pro: server_pro
 extra_css:
@@ -107,6 +109,14 @@ nav:
 #    - administration.md
 #    - Using the Overleaf Toolkit: administration/using-the-toolkit.md
 #  - Release notes: release-notes.md
-#  - How to upgrade: upgrade.md
-#  - Troubleshooting: troubleshooting.md
-  
+  - Maintenance: 
+    - Data and Backups: maintenance/data-and-backups.md
+    - Email migration: maintenance/email-migration.md
+  - Guides :
+      - For users: guides/for-users.md
+      - For administrators: 
+        - User management: guides/user-management.md
+        - Project management: guides/project-management.md
+        - Troubleshooting: 
+          - Gathering information : guides/troubleshooting/troubleshooting.md
+          - Common problems: guides/troubleshooting/common-problems.md
