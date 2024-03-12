@@ -112,6 +112,7 @@ nav:
   - Maintenance: 
     - Data and Backups: maintenance/data-and-backups.md
     - Email migration: maintenance/email-migration.md
+    - docker-compose to Toolkit migration: maintenance/docker-compose-to-toolkit-migration.md
   - Guides :
       - For users: guides/for-users.md
       - For administrators: 
