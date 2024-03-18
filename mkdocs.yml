@@ -119,5 +119,5 @@ nav:
         - User management: guides/user-management.md
         - Project management: guides/project-management.md
         - Troubleshooting: 
-          - Gathering information : guides/troubleshooting/troubleshooting.md
-          - Common problems: guides/troubleshooting/common-problems.md
+          - Gathering information : guides/troubleshooting.md
+          - Common problems: guides/common-problems.md
