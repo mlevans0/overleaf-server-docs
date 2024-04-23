@@ -1,6 +1,6 @@
 !!! note
 
-    These instructions are for v5.x and later. If you are following this guide for an earlier version please use `sharelatex` instead of `overleaf` in path names.
+    These instructions are for v5.x and later. If you are following this guide for an earlier version please use `sharelatex` instead of `overleaf` in path names and `SHARELATEX_` prefix instead of `OVERLEAF_` for environment variables.
 
 This guide will walk you through the migration from on-disk storage to an S3 compatible object storage.
 

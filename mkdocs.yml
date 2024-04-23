@@ -97,6 +97,7 @@ nav:
     - Branding: configuration/branding.md
     - TLS Proxy: configuration/tls-proxy.md
     - Configuring email: configuration/email.md
+    - Configuring S3: configuration/s3.md
     - Server Pro: 
       - Getting Server Pro: configuration/getting-server-pro.md
       - LDAP/AD: configuration/ldap.md
