@@ -10,8 +10,8 @@ For the best experience when running Overleaf, we highly recommend using a **Deb
 
 Both {{versions['community-edition-short']}} and {{versions['server-pro-short']}} currently support the following versions of dependencies:
 
-- **Docker 20.10, 23.0, 24.0**
-- **MongoDB 4.4, 5.0**
+- **Docker 23.0, 24.0, 25.0 and 26.0**
+- **MongoDB 5.0**
 - **Redis 6**
 
 MongoDB and Redis are automatically pulled by `docker compose` when running {{versions['community-edition-short']}} or {{versions['server-pro-short']}}, unless configured to use a different installation.

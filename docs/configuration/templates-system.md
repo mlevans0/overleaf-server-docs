@@ -9,10 +9,10 @@ With {{ versions['server-pro-short'] }}, you have the ability to create and publ
 
 In {{ versions['server-pro-short'] }}, a single user is responsible for publishing the curated list of templates that are visible on your local template gallery `/templates`. 
 
-To do this, you'll need to set the environment variable `SHARELATEX_TEMPLATES_USER_ID` in `toolkit/config/variables.env` to the `ID` of the user who will be responsible for template management within your instance, for example:
+To do this, you'll need to set the environment variable `OVERLEAF_TEMPLATES_USER_ID` in `toolkit/config/variables.env` to the `ID` of the user who will be responsible for template management within your instance, for example:
 
 ```bash
-SHARELATEX_TEMPLATES_USER_ID=56a8865231faeb5f07d69959
+OVERLEAF_TEMPLATES_USER_ID=56a8865231faeb5f07d69959
 ```
 
 To obtain the `ID` of the user you wish to publish public templates:
@@ -21,7 +21,7 @@ To obtain the `ID` of the user you wish to publish public templates:
 ![Admin - Manage Users](../assets/admin_manage_users.png)
 1. Search for the user using their email address and click through to their user admin page. There you will find the `ID`:
 ![User ID is shown in admin panel](../assets/user_id_in_admin_panel.png)
-1. Copy that `ID` and use it to set the environment variable `SHARELATEX_TEMPLATES_USER_ID`.
+1. Copy that `ID` and use it to set the environment variable `OVERLEAF_TEMPLATES_USER_ID`.
 1. Run `bin/up -d` to recreate the `sharelatex` container and apply the change.
 
 !!! warning
@@ -68,10 +68,10 @@ Like-wise, you can view/link to templates within a specific category by appendin
 
 ### New project menu ###
 
-When a user creates a new project, they can be shown customized links to template categories. These links are set via the  `SHARELATEX_NEW_PROJECT_TEMPLATE_LINKS` environment variable in `toolkit/config/variables.env`, for example:
+When a user creates a new project, they can be shown customized links to template categories. These links are set via the  `OVERLEAF_NEW_PROJECT_TEMPLATE_LINKS` environment variable in `toolkit/config/variables.env`, for example:
 
 ```
-SHARELATEX_NEW_PROJECT_TEMPLATE_LINKS='[
+OVERLEAF_NEW_PROJECT_TEMPLATE_LINKS='[
    {"name":"All Templates","url":"/templates/all"},
    {"name":"All Categories","url":"/templates"},
    {"name":"Reports","url":"/templates/reports"},  

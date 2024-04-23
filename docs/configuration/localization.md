@@ -2,7 +2,7 @@
 
 Both {{versions['community-edition-short']}} and {{versions['server-pro-short']}} have been translated into multiple languages. 
 
-The language can be set via `SHARELATEX_SITE_LANGUAGE` with one of the following options:
+The language can be set via `OVERLEAF_SITE_LANGUAGE` with one of the following options:
 
 * `en` - English (default)
 * `es` - Spanish
@@ -27,10 +27,10 @@ Some of these are more complete than others, we always endeavour to have all sup
 
 ## Multi language support
 
-Overleaf can support multiple languages per container. This is done via different domains configured to respond in a set language using the env variable `SHARELATEX_LANG_DOMAIN_MAPPING` with an escaped JSON string.
+Overleaf can support multiple languages per container. This is done via different domains configured to respond in a set language using the env variable `OVERLEAF_LANG_DOMAIN_MAPPING` with an escaped JSON string.
 
 ```
-SHARELATEX_LANG_DOMAIN_MAPPING = '
+OVERLEAF_LANG_DOMAIN_MAPPING = '
     {
         "www": {
         "lngCode": "en",

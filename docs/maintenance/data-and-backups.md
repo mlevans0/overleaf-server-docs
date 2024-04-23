@@ -40,7 +40,7 @@ MongoDB comes with a command-line tool called [mongodump](https://docs.mongodb.c
 
 ## Overleaf Filesystem data ##
 
-For {{ versions['toolkit-short'] }} deployments, the path where your non-editable files are stored is specified in `config/overleaf.rc` using the `SHARELATEX_DATA_PATH` environment variable. This might be: `data/sharelatex`, using a tool such as **rsync** to recursively copy this directory is required to ensure a complete backup is created.
+For {{ versions['toolkit-short'] }} deployments, the path where your non-editable files are stored is specified in `config/overleaf.rc` using the `OVERLEAF_DATA_PATH` environment variable. This might be: `data/sharelatex`, using a tool such as **rsync** to recursively copy this directory is required to ensure a complete backup is created.
 
 ## Redis ##
 
@@ -51,7 +51,7 @@ Redis stores user sessions and pending document updates before they are flushed 
 At best you do not have any valuable data in the new instance yet. We do not have a process for merging the data of instances.
 
 Assuming the new instance has not data yet, here are some steps you could follow.
-On a high level we produce a tar-ball of the mongo, redis and sharelatex volumes, copy it over to the new server and inflate it there again.
+On a high level we produce a tar-ball of the mongo, redis and overleaf volumes, copy it over to the new server and inflate it there again.
 
 With the default docker-compose file that would be:
 ```
@@ -61,7 +61,7 @@ old-server$ docker stop sharelatex
 old-server$ docker stop mongo redis
 
 # Create the tar-ball
-old-server$ tar --create --file backup-old-server.tar ~/sharelatex_data ~/mongo_data ~/redis_data
+old-server$ tar --create --file backup-old-server.tar ~/OVERLEAF_data ~/mongo_data ~/redis_data
 
 # Copy the backup-old-server.tar file from the old-server to the new-server using any method that fits
 
@@ -71,7 +71,7 @@ new-server$ docker stop mongo redis
 
 # Move new data, you can delete it too
 new-server$ mkdir backup-new-server
-new-server$ mv ~/sharelatex_data ~/mongo_data ~/redis_data backup-new-server/
+new-server$ mv ~/OVERLEAF_data ~/mongo_data ~/redis_data backup-new-server/
 
 # Populate data dirs again
 new-server$ tar --extract --file backup-old-server.tar
@@ -80,7 +80,7 @@ new-server$ tar --extract --file backup-old-server.tar
 new-server$ docker start mongo redis
 new-server$ docker start sharelatex
 ```
-Depending on your docker-compose config, you may need to adjust the paths of the mongo/redis/sharelatex volume.
+Depending on your docker-compose config, you may need to adjust the paths of the mongo/redis/overleaf volume.
 
 
 With a toolkit setup that would be:
@@ -113,7 +113,7 @@ new-server$ bin/up
    - mongodb datadir
 2. `~/redis_data` (b)
    - redis db datadir
-3. `~/sharelatex_data`
+3. `~/overleaf_data`
    1. bin
       1. synctex (d)
          - unused in latest release, previously a custom synctex binary was used

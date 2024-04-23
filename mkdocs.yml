@@ -61,7 +61,7 @@ extra:
     toolkit-full: Overleaf Toolkit
     toolkit-short: Toolkit
     copyright: Overleaf part of Digital Science
-    latest-two-point-releases-of-current-version: 4.2.2 and 4.2.3
+    latest-two-point-releases-of-current-version: 4.2.3 and 4.2.4
     last-released-point-release-of-previous-major-version: 3.5.15
   tags:
     Server Pro: server_pro
@@ -91,33 +91,49 @@ nav:
     # - Using Docker Compose: installation/using-docker-compose.md
     - Post-installation tasks: installation/post-installation-tasks.md
   - Configuration: 
-    - Using the Overleaf Toolkit: 
+    - Overleaf Toolkit: 
       - configuration/overleaf-toolkit.md
       - Toolkit settings: configuration/toolkit-settings.md
-      - Branding: configuration/branding.md
-      - TLS Proxy: configuration/tls-proxy.md
-      - Configuring email: configuration/email.md
-      - Server Pro: 
-        - Getting Server Pro: configuration/getting-server-pro.md
-        - LDAP/AD: configuration/ldap.md
-        - SAML 2.0: configuration/saml2.md
-        - Templates system: configuration/templates-system.md
+    - Docker Compose:
+      - docker-compose to Toolkit migration: configuration/docker-compose-to-toolkit-migration.md
+    - Branding: configuration/branding.md
+    - TLS Proxy: configuration/tls-proxy.md
+    - Configuring email: configuration/email.md
+    - Server Pro: 
+      - Getting Server Pro: configuration/getting-server-pro.md
+      - LDAP/AD: configuration/ldap.md
+      - SAML 2.0: configuration/saml2.md
+      - Templates system: configuration/templates-system.md
+      - Git integration: configuration/git-bridge.md
     - Environment variables: configuration/environment-variables.md
     - Localization: configuration/localization.md
     - Logging: configuration/logging.md
 #  - Administration: 
 #    - administration.md
 #    - Using the Overleaf Toolkit: administration/using-the-toolkit.md
-#  - Release notes: release-notes.md
   - Maintenance: 
     - Data and Backups: maintenance/data-and-backups.md
-    - Email migration: maintenance/email-migration.md
-    - docker-compose to Toolkit migration: maintenance/docker-compose-to-toolkit-migration.md
+    - Horizontal scaling: maintenance/horizontal-scaling.md
   - Guides :
       - For users: guides/for-users.md
       - For administrators: 
         - User management: guides/user-management.md
         - Project management: guides/project-management.md
+        - Email migration: guides/email-migration.md
+        - Full project history migration: guides/full-project-history-migration.md
         - Troubleshooting: 
           - Gathering information : guides/troubleshooting.md
           - Common problems: guides/common-problems.md
+  - Release notes:
+    - 5.x.x: release-notes/Release-Notes-5.x.x.md
+    - 4.x.x: release-notes/Release-Notes--4.x.x.md
+    - 3.x.x: release-notes/Release-Notes-3.x.x.md
+    - 2.x.x: release-notes/Release-Notes-2.0.md
+    - 1.0.0: release-notes/Release-Notes---1.0.0.md
+    - 0.6.0: release-notes/Release-Notes---0.6.0.md
+    - 0.5.0: release-notes/Release-Notes---0.5.0.md
+    - 0.4.0: release-notes/Release-Notes---0.4.0.md
+    - 0.3.0: release-notes/Release-Notes---0.3.0.md
+    - 0.2.0: release-notes/Release-Notes---0.2.0.md
+    - 0.1.3 and 0.1.4: release-notes/Release-Notes---0.1.3-and-0.1.4.md
+    - 0.1.2: release-notes/Release-Notes---0.1.2.md

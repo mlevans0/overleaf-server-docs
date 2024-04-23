@@ -21,31 +21,31 @@ EXTERNAL_AUTH=saml
 
 !!! note
 
-    To preserve backward compatibility with older configuration files, if `EXTERNAL_AUTH` is not set, but `SHARELATEX_SAML_ENTRYPOINT` is set, then the SAML 2.0
+    To preserve backward compatibility with older configuration files, if `EXTERNAL_AUTH` is not set, but `OVERLEAF_SAML_ENTRYPOINT` is set, then the SAML 2.0
     module will be activated. We still recommend setting `EXTERNAL_AUTH` explicitly
 
 ### Passing keys and certificates ###
 
 As of Server Pro `2.7.0`:
 
-- The value of the `SHARELATEX_SAML_CERT` environment variable cannot be empty if SAML 2.0 is enabled (with `EXTERNAL_AUTH=saml`, or if `SHARELATEX_SAML_ENTRYPOINT` is set).
+- The value of the `OVERLEAF_SAML_CERT` environment variable cannot be empty if SAML 2.0 is enabled (with `EXTERNAL_AUTH=saml`, or if `OVERLEAF_SAML_ENTRYPOINT` is set).
 
 As of Server Pro `2.5.0`:
 
-- The value of the `SHARELATEX_SAML_CERT` environment variable must be passed in single-line format (without the begin and end lines from the PEM format; see below for more information).
-- The value of the `SHARELATEX_SAML_PRIVATE_CERT` environment variable should be a full path to a file which contains the private key in PEM format.
-- The value of the `SHARELATEX_SAML_DECRYPTION_PVK` environment variable must be passed in PEM format (multi-line). (But single-line may be [supported soon](https://github.com/node-saml/passport-saml/issues/524).)
+- The value of the `OVERLEAF_SAML_CERT` environment variable must be passed in single-line format (without the begin and end lines from the PEM format; see below for more information).
+- The value of the `OVERLEAF_SAML_PRIVATE_CERT` environment variable should be a full path to a file which contains the private key in PEM format.
+- The value of the `OVERLEAF_SAML_DECRYPTION_PVK` environment variable must be passed in PEM format (multi-line). (But single-line may be [supported soon](https://github.com/node-saml/passport-saml/issues/524).)
 
 To pass a key or certificate in single-line format, you can just specify it as a string (don't include the begin or end lines, any internal whitespace, or any newline escapes, e.g. `\n`, also do not add quotes):
 
 ```env
-SHARELATEX_SAML_CERT=MIIEowIBAAKCAQEAxmJWY0eJcuV2uBtLnQ4004fuknbODo5xIyRhkYNkls5n9OrBq4Lok6cjv7G2Q8mxAdlIUmzhTSyuNkrMMKZrPaMsAkNKE/aNpeWuSLXqcMs8T/8gYCDcEmC5KYEJakNtKb3ZX2FKwT4yHHpsNomLDzJD5DyJKbRpNBm2no7ggIy7TQRJ2H00mogQIQu8/fUANXVeGPshvLJU8MXEy/eiXkHJIT3DDA4VSr/C/tfP0tGJSNTM874urc4zej+4INuTuMPtesZS47J0AsPxQuxengS4M76cVt5cH+Iqd1nKe5UqiSKvLCXacPYg/T/Kdx0tBnwHIjKo/cbzZ+r+XynsCwIDAQABAoIBAFPWWwu5v6x+rJ1Ba8MDre93Eqty6cHdEJL5XQJRtMDGmcg3LYF94SwFBmaMg6pCIjvVx2qN+OjUaQsosQIeUlPKEV8jcLrfBx2E4xJ3Tow8V1C3UMdPG7Hojler4H633/oz8RkN1Lm1vxep5PFnTw0tAOQDcTPeulb6RuLbHqU0FEnf/jVOMhtPLcMAwJ3fkAJQ+ljFW2VKCQ83d+ci1p+NHY/dbGLSR4lK58mVghcRMO3zhe5scrbECHJMfT6fCb2TXdjaueFUGC6+fqUXvDj8HRfUilzTegNq8ZhwgMSw1HeX/PuiczSKc3aHYSsohMBugTErnkW+qF4ZkE+kxgECgYEA/sm7umcyFuZME+RWYL8Gsp8agH1OGEgsmIiMi1z6RTlTmdR8fN18ItzXyW+363VZln/1b5wCaPdLIxgASxybLAaxnKAXfmL7QvyVAaMwxj7N0ogvMQoNx2VuSGZSam2+LFVIMWHq1C+3fvVnCDLm6oHvIMK/zvEsPBBtz+L6rlECgYEAx1PrKogaGHCi1XgsrNv9aFaayRvmhzZbmiigF0iWKAd3KKww94BdyyGSVfMfyL23LAbMQDCrDNGpYAnpNZo/cL+OcGPYzlPsWDBrJub1HOA/H3WQlP4oEcfdbmJZhIkEwTGFHaCHynEu4ekiCrWz9+XVNCquTyqnmaVDEzAfEZsCgYA8jQbfUt0Vkh+sboyUq3FVC/jJZn4jyStICNOV3z/fKbOTkGsRZbW1t1RVHAbSn23uFXTn1GTCO1sQ+QhA0YiTGvgk5+sNb0qVbd+fpv/VbWGO0iyc8+24YIOoEyEtB+21LYNdsQ6U5M4wDvQwf6BfRQfmekIJVUmU8LaYPDIlMQKBgDSRiT/aTSeM7STnYMDl89sEnCXV2eJnD5mEhVQerJs5/M8ZOoDLtfDQlctdJ1DF1/0gfdWgADyNPuI5OuwMFhciLequKoufzoEjo97KonJPIdamJs9kiCTIVTm7bmhpyns5GCZMJAPb/cVOus+gRCpozuXHK9ltIm5/C0WQN2FpAoGBAOss6RN2krieqbn1mG8e2v5mMUd0CJkiJu2y5MnF3dYHXSQ3/ePAh/YgJOthpgYgBh+mV0DLqJhx/1DLS/xiqcoHDlndQDmYbtvvY7RlMo00+nGzkRVOfrqyhC+1KsYHGPbSQixNQXtvFbAAVMSo+RRBkVGINYGDFnlQUpkppYRk
+OVERLEAF_SAML_CERT=MIIEowIBAAKCAQEAxmJWY0eJcuV2uBtLnQ4004fuknbODo5xIyRhkYNkls5n9OrBq4Lok6cjv7G2Q8mxAdlIUmzhTSyuNkrMMKZrPaMsAkNKE/aNpeWuSLXqcMs8T/8gYCDcEmC5KYEJakNtKb3ZX2FKwT4yHHpsNomLDzJD5DyJKbRpNBm2no7ggIy7TQRJ2H00mogQIQu8/fUANXVeGPshvLJU8MXEy/eiXkHJIT3DDA4VSr/C/tfP0tGJSNTM874urc4zej+4INuTuMPtesZS47J0AsPxQuxengS4M76cVt5cH+Iqd1nKe5UqiSKvLCXacPYg/T/Kdx0tBnwHIjKo/cbzZ+r+XynsCwIDAQABAoIBAFPWWwu5v6x+rJ1Ba8MDre93Eqty6cHdEJL5XQJRtMDGmcg3LYF94SwFBmaMg6pCIjvVx2qN+OjUaQsosQIeUlPKEV8jcLrfBx2E4xJ3Tow8V1C3UMdPG7Hojler4H633/oz8RkN1Lm1vxep5PFnTw0tAOQDcTPeulb6RuLbHqU0FEnf/jVOMhtPLcMAwJ3fkAJQ+ljFW2VKCQ83d+ci1p+NHY/dbGLSR4lK58mVghcRMO3zhe5scrbECHJMfT6fCb2TXdjaueFUGC6+fqUXvDj8HRfUilzTegNq8ZhwgMSw1HeX/PuiczSKc3aHYSsohMBugTErnkW+qF4ZkE+kxgECgYEA/sm7umcyFuZME+RWYL8Gsp8agH1OGEgsmIiMi1z6RTlTmdR8fN18ItzXyW+363VZln/1b5wCaPdLIxgASxybLAaxnKAXfmL7QvyVAaMwxj7N0ogvMQoNx2VuSGZSam2+LFVIMWHq1C+3fvVnCDLm6oHvIMK/zvEsPBBtz+L6rlECgYEAx1PrKogaGHCi1XgsrNv9aFaayRvmhzZbmiigF0iWKAd3KKww94BdyyGSVfMfyL23LAbMQDCrDNGpYAnpNZo/cL+OcGPYzlPsWDBrJub1HOA/H3WQlP4oEcfdbmJZhIkEwTGFHaCHynEu4ekiCrWz9+XVNCquTyqnmaVDEzAfEZsCgYA8jQbfUt0Vkh+sboyUq3FVC/jJZn4jyStICNOV3z/fKbOTkGsRZbW1t1RVHAbSn23uFXTn1GTCO1sQ+QhA0YiTGvgk5+sNb0qVbd+fpv/VbWGO0iyc8+24YIOoEyEtB+21LYNdsQ6U5M4wDvQwf6BfRQfmekIJVUmU8LaYPDIlMQKBgDSRiT/aTSeM7STnYMDl89sEnCXV2eJnD5mEhVQerJs5/M8ZOoDLtfDQlctdJ1DF1/0gfdWgADyNPuI5OuwMFhciLequKoufzoEjo97KonJPIdamJs9kiCTIVTm7bmhpyns5GCZMJAPb/cVOus+gRCpozuXHK9ltIm5/C0WQN2FpAoGBAOss6RN2krieqbn1mG8e2v5mMUd0CJkiJu2y5MnF3dYHXSQ3/ePAh/YgJOthpgYgBh+mV0DLqJhx/1DLS/xiqcoHDlndQDmYbtvvY7RlMo00+nGzkRVOfrqyhC+1KsYHGPbSQixNQXtvFbAAVMSo+RRBkVGINYGDFnlQUpkppYRk
 ```
 
 To pass a key or certificate in multi-line format, wrap the entire value in double quotes and use new line characters (`\n`) as usual:
 
 ```env
-SHARELATEX_SAML_DECRYPTION_PVK="-----BEGIN RSA PRIVATE KEY-----
+OVERLEAF_SAML_DECRYPTION_PVK="-----BEGIN RSA PRIVATE KEY-----
 MIIEowIBAAKCAQEAxmJWY0eJcuV2uBtLnQ4004fuknbODo5xIyRhkYNkls5n9OrB
 q4Lok6cjv7G2Q8mxAdlIUmzhTSyuNkrMMKZrPaMsAkNKE/aNpeWuSLXqcMs8T/8g
 YCDcEmC5KYEJakNtKb3ZX2FKwT4yHHpsNomLDzJD5DyJKbRpNBm2no7ggIy7TQRJ
@@ -91,7 +91,7 @@ Here is an example of appropriate Service Provider (SP) metadata, note the `Asse
 <EntityDescriptor xmlns="urn:oasis:names:tc:SAML:2.0:metadata"
                   xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
                   entityID="sharelatex-saml"
-                  ID="sharelatex_saml">
+                  ID="OVERLEAF_saml">
   <SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
     <NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress</NameIDFormat>
     <AssertionConsumerService index="1"
@@ -110,14 +110,14 @@ At Overleaf, we test the SAML 2.0 integration against a SAML 2.0 test server. Th
 # added to variables.env
 
 EXTERNAL_AUTH=saml
-SHARELATEX_SAML_ENTRYPOINT=http://localhost:8081/simplesaml/saml2/idp/SSOService.php
-SHARELATEX_SAML_CALLBACK_URL=http://saml/saml/callback
-SHARELATEX_SAML_ISSUER=sharelatex-test-saml
-SHARELATEX_SAML_IDENTITY_SERVICE_NAME=SAML Test Server
-SHARELATEX_SAML_EMAIL_FIELD=email
-SHARELATEX_SAML_FIRST_NAME_FIELD=givenName
-SHARELATEX_SAML_LAST_NAME_FIELD=sn
-SHARELATEX_SAML_UPDATE_USER_DETAILS_ON_LOGIN=true
+OVERLEAF_SAML_ENTRYPOINT=http://localhost:8081/simplesaml/saml2/idp/SSOService.php
+OVERLEAF_SAML_CALLBACK_URL=http://saml/saml/callback
+OVERLEAF_SAML_ISSUER=sharelatex-test-saml
+OVERLEAF_SAML_IDENTITY_SERVICE_NAME=SAML Test Server
+OVERLEAF_SAML_EMAIL_FIELD=email
+OVERLEAF_SAML_FIRST_NAME_FIELD=givenName
+OVERLEAF_SAML_LAST_NAME_FIELD=sn
+OVERLEAF_SAML_UPDATE_USER_DETAILS_ON_LOGIN=true
 ```
 
 The `sharelatex/saml-test` image needs to run in the same network as the `sharelatex` container (which by default would be `overleaf_default`), so we'll proceed with the following steps:

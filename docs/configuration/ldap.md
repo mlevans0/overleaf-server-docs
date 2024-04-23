@@ -23,7 +23,7 @@ LDAP users will appear in Overleaf Admin Panel once they log in first time with 
 
 !!! note
 
-    To preserve backward compatibility with older configuration files, if `EXTERNAL_AUTH` is not set, but `SHARELATEX_LDAP_URL` is set, then the LDAP
+    To preserve backward compatibility with older configuration files, if `EXTERNAL_AUTH` is not set, but `OVERLEAF_LDAP_URL` is set, then the LDAP
     module will be activated. We still recommend setting `EXTERNAL_AUTH` explicitly.
 
 ## Example configuration ##
@@ -34,15 +34,15 @@ At Overleaf, we test the LDAP integration against a [test openldap server](https
 # added to variables.env
 
 EXTERNAL_AUTH=ldap
-SHARELATEX_LDAP_URL=ldap://ldap:389
-SHARELATEX_LDAP_SEARCH_BASE=ou=people,dc=planetexpress,dc=com
-SHARELATEX_LDAP_SEARCH_FILTER=(uid={{username}})
-SHARELATEX_LDAP_BIND_DN=cn=admin,dc=planetexpress,dc=com
-SHARELATEX_LDAP_BIND_CREDENTIALS=GoodNewsEveryone
-SHARELATEX_LDAP_EMAIL_ATT=mail
-SHARELATEX_LDAP_NAME_ATT=cn
-SHARELATEX_LDAP_LAST_NAME_ATT=sn
-SHARELATEX_LDAP_UPDATE_USER_DETAILS_ON_LOGIN=true
+OVERLEAF_LDAP_URL=ldap://ldap:389
+OVERLEAF_LDAP_SEARCH_BASE=ou=people,dc=planetexpress,dc=com
+OVERLEAF_LDAP_SEARCH_FILTER=(uid={{username}})
+OVERLEAF_LDAP_BIND_DN=cn=admin,dc=planetexpress,dc=com
+OVERLEAF_LDAP_BIND_CREDENTIALS=GoodNewsEveryone
+OVERLEAF_LDAP_EMAIL_ATT=mail
+OVERLEAF_LDAP_NAME_ATT=cn
+OVERLEAF_LDAP_LAST_NAME_ATT=sn
+OVERLEAF_LDAP_UPDATE_USER_DETAILS_ON_LOGIN=true
 ```
 
 The `openldap` needs to run in the same network as the `sharelatex` container (which by default would be `overleaf_default`), so we'll proceed with the following steps:

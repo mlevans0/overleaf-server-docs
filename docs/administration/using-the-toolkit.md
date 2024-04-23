@@ -84,12 +84,12 @@ We should see some output similar to this:
 - config/overleaf.rc
     - status: present
     - values
-        - SHARELATEX_DATA_PATH: data/sharelatex
+        - OVERLEAF_DATA_PATH: data/sharelatex
         - SERVER_PRO: true
             - logged in to quay.io: true
         - SIBLING_CONTAINERS_ENABLED: true
-        - SHARELATEX_LISTEN_IP: 0.0.0.0
-        - SHARELATEX_PORT: 80
+        - OVERLEAF_LISTEN_IP: 0.0.0.0
+        - OVERLEAF_PORT: 80
         - MONGO_ENABLED: true
         - MONGO_IMAGE: mongo:4.4
         - MONGO_DATA_PATH: data/mongo
@@ -99,8 +99,8 @@ We should see some output similar to this:
 - config/variables.env
     - status: present
     - values
-        - SHARELATEX_FILESTORE_BACKEND: fs
-        - SHARELATEX_HISTORY_BACKEND: fs
+        - OVERLEAF_FILESTORE_BACKEND: fs
+        - OVERLEAF_HISTORY_BACKEND: fs
 ====== Warnings ======
 - None, all good
 ====== End ======

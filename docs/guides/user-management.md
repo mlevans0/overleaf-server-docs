@@ -8,6 +8,15 @@ Once you are logged in as an admin user, you can visit /admin/register on your O
 
 ## Deleting users ##
 
+## Counting users ##
+
+Create a mongo shell by running `bin/mongo` and check the number of entries in the `users` collection:
+
+``` bash
+> db.users.count()
+16
+```
+
 ## Updating user details ##
 
 ## Generating password reset links ##

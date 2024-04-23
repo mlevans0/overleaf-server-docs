@@ -101,9 +101,9 @@ Open the `config/variables.env` file using your favourite text editor and update
 
 | Name | Description | Example |
 | ---- | ----------- | ------- |
-| `SHARELATEX_SITE_URL` | Where your instance of Overleaf is publicly available. This is used in public links, and when connecting over websockets, so **must be configured correctly**! | https://overleaf.lilliput.com
-| `SHARELATEX_EMAIL_FROM_ADDRESS` | This email address will be used as the `from` address for all outgoing emails. | no-reply@lilliput.com
-| `SHARELATEX_ADMIN_EMAIL` | The email address where users can reach the person who runs the site. | it-services@lilliput.com
+| `OVERLEAF_SITE_URL` | Where your instance of Overleaf is publicly available. This is used in public links, and when connecting over websockets, so **must be configured correctly**! | https://overleaf.lilliput.com
+| `OVERLEAF_EMAIL_FROM_ADDRESS` | This email address will be used as the `from` address for all outgoing emails. | no-reply@lilliput.com
+| `OVERLEAF_ADMIN_EMAIL` | The email address where users can reach the person who runs the site. | it-services@lilliput.com
 
 Once you have updated these environment variables, save and quit - you're now ready to start your instance for the first time.
 
