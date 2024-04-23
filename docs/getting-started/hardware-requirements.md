@@ -1,10 +1,10 @@
-# Hardware requirements
+# Hardware requirements #
 
 When provisioning hardware to run Overleaf, the main factor to consider is how many concurrent users will be running compiles.
 
 For example, if you have a license for 100 total users, but only expect ~5 to be working at the same time, the minimal install will be sufficient. If you expect a higher proportion to be working (and compiling) simultaneously, you should consider provisioning a server with a higher specification.
 
-## Minimal install
+## Minimal install ##
 
 A minimum base requirement of 2 cores and 3GB memory is required for basic operations with around 5 concurrent users. This minimum requirement will also be sufficient for larger groups where there is less concurrent usage, or where it is ok for compile times to be longer during heavier usage.
 
@@ -12,7 +12,7 @@ A minimum base requirement of 2 cores and 3GB memory is required for basic opera
 
     If you are considering using a NFS (Network File System) based filesystem for your small instance please have a look at this section in the [Troubleshooting](/troubleshooting/troubleshooting/) guide.
 
-## Scaling
+## Scaling ##
 
 As a rule of thumb, to provide a high and consistent level of service, 1 CPU core and 1GB of memory should be added to the minimal install for every 5-10 concurrent users.
 
@@ -22,7 +22,7 @@ This should only be taken as a guide, as factors such as the size of typical doc
 
     If you are running an {{versions['server-pro-short']}} installation for 300 total users, and regularly expect 30-60 of those users to be compiling documents at the same time, 8GB and 7 Cores (5 cores + 5GB + base of 2 cores & 3GB) should provide sufficient resources for your users to have a consistently high level of service.
 
-## Large deployments
+## Large deployments ##
 
 Many of our customers look to deploy {{versions['server-pro-short']}} organization wide, or across large teams. In those situations, it is difficult for us to advise on specific setup requirements, because the use cases and underlying hardware available can be quite varied.
 
@@ -36,7 +36,7 @@ Many of our customers look to deploy {{versions['server-pro-short']}} organizati
 
 Customers who are exceeding the limits of a single large server can take a look at Horizontal Scaling for {{versions['server-pro-short']}}.
 
-## Storage
+## Storage ##
 
 We advise against using Network File System (NFS)/Amazon EFS/Amazon EBS for project/history storage in larger setups and explicitly **do not support it** for horizontal scaling. 
 
@@ -47,7 +47,7 @@ Additionally {{versions['server-pro-short']}} can specify reasonable timeouts on
 
     For reference, GitLab is following a similar stance of [not supporting NFS/Amazon EFS](https://docs.gitlab.com/ee/administration/nfs.html) with their self-managed offering.
 
-## Nginx specific configuration for large deployments
+## Nginx specific configuration for large deployments ##
 
 By default, Overleaf Server instance limit the number of connections to 768. This includes persistent Websocket connections, top-level HTML navigation and ajax requests. Once the limit is hit, the editor might not be able to connect, the editor page might not load entirely and compile requests can fail. Nginx will return status 500 responses and log `worker_connections are not enough while connecting to upstream` into `var/log/nginx/error`.log inside the `sharelatex` container.
 
@@ -68,6 +68,6 @@ Overleaf Server instances expose environment variables for adjusting these nginx
     - Default value `NGINX_KEEPALIVE_TIMEOUT`, use [`keepalive_timeout 60s`](https://nginx.org/en/docs/http/ngx_http_upstream_module.html#keepalive_timeout) (default value in upstream) in **nginx-host**
     - Custom value `NGINX_KEEPALIVE_TIMEOUT=100s`, use [`keepalive_timeout 90s`](https://nginx.org/en/docs/http/ngx_http_upstream_module.html#keepalive_timeout) (custom value in upstream) in **nginx-host**
 
-## CPU speed
+## CPU speed ##
 
 LaTeX is a single threaded program, meaning it can only utilize one CPU core at a time. The CPU is also the main limitation when compiling a document. Therefore the faster the single core performance of your CPU the faster you will be able to compile a document. More cores will only help if you are trying to compile more documents than you have free CPU cores.

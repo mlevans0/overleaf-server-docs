@@ -94,8 +94,6 @@ nav:
     - Overleaf Toolkit: 
       - configuration/overleaf-toolkit.md
       - Toolkit settings: configuration/toolkit-settings.md
-    - Docker Compose:
-      - docker-compose to Toolkit migration: configuration/docker-compose-to-toolkit-migration.md
     - Branding: configuration/branding.md
     - TLS Proxy: configuration/tls-proxy.md
     - Configuring email: configuration/email.md
@@ -121,6 +119,8 @@ nav:
         - Project management: guides/project-management.md
         - Email migration: guides/email-migration.md
         - Full project history migration: guides/full-project-history-migration.md
+        - Docker Compose to Toolkit migration: guides/docker-compose-to-toolkit-migration.md
+        - S3 migration: guides/s3-migration.md
         - Troubleshooting: 
           - Gathering information : guides/troubleshooting.md
           - Common problems: guides/common-problems.md
