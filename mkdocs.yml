@@ -1,5 +1,6 @@
 site_name: Overleaf Server Docs
-repo_url: https://github.com/overleaf
+repo_url: https://github.com/mlevans0/overleaf-server-docs
+edit_uri: edit/main/docs/
 theme:
   language: en
   name: material
@@ -30,6 +31,7 @@ theme:
     - content.code.copy
     - content.code.select
     - content.code.annotate
+    - content.action.edit
     - navigation.expand
 plugins:
   - search
@@ -61,8 +63,8 @@ extra:
     toolkit-full: Overleaf Toolkit
     toolkit-short: Toolkit
     copyright: Overleaf part of Digital Science
-    latest-two-point-releases-of-current-version: 4.2.3 and 4.2.4
-    last-released-point-release-of-previous-major-version: 3.5.15
+    latest-two-point-releases-of-current-version: 5.0.3
+    last-released-point-release-of-previous-major-version: 3.5.15, 4.2.3 and 4.2.4
   tags:
     Server Pro: server_pro
 extra_css:

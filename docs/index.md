@@ -10,6 +10,10 @@ Overleaf is a powerful tool that facilitates collaborative authoring and publish
 
 Whether you're an administrator setting up Overleaf for your organization or a user looking to leverage Overleaf's collaborative features for document creation for your lab, this documentation will walk you through the necessary steps to install, configure, and utilize {{ versions['community-edition-short'] }} and {{ versions['server-pro-short'] }} as an on-premise solution.
 
+!!! question
+
+    Does your business or research organization need enhanced security, central administration, collaboration features, and Git integration? Overleaf offers {{ versions['server-pro-short'] }}, an enterprise solution for teams of 10 or more. [Talk to us](https://www.overleaf.com/for/enterprises). 
+
 ## What is the difference between {{ versions['server-pro-short'] }} and {{ versions['community-edition-short'] }}?
 
 Overleaf has two on-premise solutions - {{ versions['server-pro-short'] }} and {{ versions['community-edition-short'] }}. Both versions run in Docker containers, isolating them from other applications on the same host. This provides an additional layer of security by preventing potential cross-application attacks. They have also been designed to run on air-gapped servers, which means they can be completely isolated from other networks, including the Internet. Docker provides tooling for transferring the application from an internet-connected to an air-gapped environment. After the initial download, no internet connection is required, significantly reducing the risk of external threats.
