@@ -1,3 +1,8 @@
+---
+tags:
+  - Server Pro
+---
+
 The Git integration is available since {{ versions['server-pro-short'] }} 4.0.1
 
 User documentation for this feature can be found [here](https://www.overleaf.com/learn/how-to/Using_Git_and_GitHub#The_Overleaf_Git-Bridge).

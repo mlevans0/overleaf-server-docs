@@ -1,3 +1,5 @@
+Some times we need to change the schema of data in the database as we evolve Overleaf, migration scripts are used to automate this process. They will have been run on overleaf.com first which is the largest instance of Overleaf in the world so most eventualities will have been encounter already, however we make no guarantees over your data. Please ensure that you create a consistent back of your data before upgrading you instance.
+
 ## Data storage ##
 
 {{ versions['community-edition-short'] }} and {{ versions['server-pro-short'] }} store their data in three separate places:
@@ -46,7 +48,7 @@ For {{ versions['toolkit-short'] }} deployments, the path where your non-editabl
 
 Redis stores user sessions and pending document updates before they are flushed to MongoDB. To backup redis, you will need to copy the **RDB** file to a secure location. For {{ versions['toolkit-short'] }} deployments, the path where this file is stored is specified in `config/overleaf.rc` using the `REDIS_DATA_PATH` environment variable.
 
-# Migrating data between servers ##
+## Migrating data between servers ##
 
 At best you do not have any valuable data in the new instance yet. We do not have a process for merging the data of instances.
 

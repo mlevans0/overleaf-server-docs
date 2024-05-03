@@ -79,6 +79,10 @@ markdown_extensions:
         - name: mermaid
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
 nav:
   - Home: 
     - Welcome: index.md
@@ -102,34 +106,34 @@ nav:
     - Configuring S3: configuration/s3.md
     - Server Pro: 
       - Getting Server Pro: configuration/getting-server-pro.md
+      - Sandboxed Compiles: configuration/sandboxed-compiles.md
       - LDAP/AD: configuration/ldap.md
       - SAML 2.0: configuration/saml2.md
       - Templates system: configuration/templates-system.md
       - Git integration: configuration/git-bridge.md
+      - Adding Learn pages: configuration/adding-learn-pages.md
     - Environment variables: configuration/environment-variables.md
     - Localization: configuration/localization.md
     - Logging: configuration/logging.md
-#  - Administration: 
-#    - administration.md
-#    - Using the Overleaf Toolkit: administration/using-the-toolkit.md
-  - Maintenance: 
+  - Maintenance:
     - Data and Backups: maintenance/data-and-backups.md
+    - Email migration: maintenance/email-migration.md
+    - Docker Compose to Toolkit migration: maintenance/docker-compose-to-toolkit-migration.md
+    - S3 migration: maintenance/s3-migration.md
     - Horizontal scaling: maintenance/horizontal-scaling.md
   - Guides :
       - For users: guides/for-users.md
       - For administrators: 
         - User management: guides/user-management.md
-        - Project management: guides/project-management.md
-        - Email migration: guides/email-migration.md
+        - Project management: guides/project-management.md  
+        - Doc version recovery: guides/doc-version-recovery.md
         - Full project history migration: guides/full-project-history-migration.md
-        - Docker Compose to Toolkit migration: guides/docker-compose-to-toolkit-migration.md
-        - S3 migration: guides/s3-migration.md
         - Troubleshooting: 
           - Gathering information : guides/troubleshooting.md
           - Common problems: guides/common-problems.md
   - Release notes:
     - 5.x.x: release-notes/Release-Notes-5.x.x.md
-    - 4.x.x: release-notes/Release-Notes--4.x.x.md
+    - 4.x.x: release-notes/Release-Notes-4.x.x.md
     - 3.x.x: release-notes/Release-Notes-3.x.x.md
     - 2.x.x: release-notes/Release-Notes-2.0.md
     - 1.0.0: release-notes/Release-Notes---1.0.0.md
