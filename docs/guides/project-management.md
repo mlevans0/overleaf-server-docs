@@ -13,7 +13,7 @@ The restored file will take the following format: `FILENAME-TIMESTAMP.EXTENSION`
 
 ## Transferring ownership of a project ##
 
-The admin panel in {{ versions['server-pro-short'] }} has a dedicated page per project. You can either get to it by searching for the user on "/admin/user", then going to their **Projects** tab, finding the project in the list and clicking on the "(i)" icon; or by directly navigating to the page with a known project-id "/admin/project/<the project id>". On the project info page, you can find a **Transfer Ownership** button, which opens a modal where you can specify any user as the new owner. The new owner does not need to be an existing collaborator on the project.
+The admin panel in {{ versions['server-pro-short'] }} has a dedicated page per project. You can either get to it by searching for the user on "/admin/user", then going to their **Projects** tab, finding the project in the list and clicking on the :material-information: icon; or by directly navigating to the page with a known project-id "/admin/project/<the project id>". On the project info page, you can find a **Transfer Ownership** button, which opens a modal where you can specify any user as the new owner. The new owner does not need to be an existing collaborator on the project.
 
 !!! info
 

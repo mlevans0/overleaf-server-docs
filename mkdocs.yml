@@ -119,6 +119,7 @@ nav:
     - Data and Backups: maintenance/data-and-backups.md
     - Email migration: maintenance/email-migration.md
     - Docker Compose to Toolkit migration: maintenance/docker-compose-to-toolkit-migration.md
+    - Updating MongoDB: maintenance/updating-mongodb.md
     - S3 migration: maintenance/s3-migration.md
     - Horizontal scaling: maintenance/horizontal-scaling.md
   - Guides :
