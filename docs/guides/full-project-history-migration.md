@@ -110,9 +110,9 @@ The script can be run after all the projects have been migrated. It can also be 
 
     In Server Pro before version 3.5.13, the script deletes the content of `docHistory` and `docHistoryIndex` collections. Mongo does not release disk space after you delete documents, instead, it will reuse that space for future documents in the same collection. Nothing will write to these collections again after the history migration, so the disk space will remain unused.
 
-    If you want to make the disk space available again you can upgrade to Server Pro 3.5.13 (when still using the 3.x release) or Server Pro 4.0.6 (when using the 4.x release) and re-run the cleanup script.
+    If you want to make the disk space available again you can upgrade to Server Pro 3.5.13 (when still using the 3.x release) or Server Pro 4.2.5 (when using the 4.x release) and re-run the cleanup script.
 
-    The cleanup script as included in Server Pro `3.5.13`, `4.0.6` and `4.1.0` is dropping the collections as the final step.
+    The cleanup script as included in Server Pro the latest patch releases of `3.5.x` and latest `4.x.x` are dropping the collections as the final step.
 
     It is safe to re-run the cleanup script.
 

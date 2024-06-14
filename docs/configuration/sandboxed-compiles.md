@@ -93,7 +93,6 @@ services:
             SANDBOXED_COMPILES_SIBLING_CONTAINERS: "true"    #### IMPORTANT
             # Note: (/var/lib/sharelatex for versions 4.x and earlier)
             SANDBOXED_COMPILES_HOST_DIR: "/data/overleaf_data/data/compiles"  #### IMPORTANT 
-            SYNCTEX_BIN_HOST_PATH: "/data/overleaf_data/bin"  #### IMPORTANT
 ```
 
 ## Changing the Tex Live Image ##

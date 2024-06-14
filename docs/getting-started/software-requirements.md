@@ -14,6 +14,10 @@ Both {{versions['community-edition-short']}} and {{versions['server-pro-short']}
 - :simple-mongodb: **MongoDB 5.0**
 - :simple-redis: **Redis 6**
 
+!!! tip
+
+    `docker-compose` is generally installed with Docker via the `docker-compose-plugin` package.
+
 MongoDB and Redis are automatically pulled by `docker compose` when running {{versions['community-edition-short']}} or {{versions['server-pro-short']}}, unless configured to use a different installation.
 
 The {{ versions['toolkit-full'] }} depends on the following programs:
@@ -29,22 +33,20 @@ Once Docker is installed correctly, you should be able to run these commands wit
 
 ```
 # Shows the installed Docker version
-$ docker --version
+docker --version
 
-Docker version 24.0.5, build ced0996
-
-# Shows the installed Docker compose version
-$ docker compose version
-
-Docker Compose version v2.20.2
+# docker compose plugin (v2)
+docker compose version
+# legacy docker-compose (v1)
+docker-compose --version
 
 # List the running Docker containers on your system
 docker ps
 
 CONTAINER ID   IMAGE                                     COMMAND                  CREATED        STATUS                        PORTS                NAMES
-b1fadcd1dcb1   quay.io/sharelatex/sharelatex-pro:4.1.0   "/sbin/my_init"          23 hours ago   Up About a minute             0.0.0.0:80->80/tcp   sharelatex
+b1fadcd1dcb1   quay.io/sharelatex/sharelatex-pro:5.1.0   "/sbin/my_init"          23 hours ago   Up About a minute             0.0.0.0:80->80/tcp   sharelatex
 7900ebb9ebb8   redis:6.2                                 "docker-entrypoint.s…"   45 hours ago   Up About a minute             6379/tcp             redis
-fbd49d420e59   mongo:4.4                                 "docker-entrypoint.s…"   45 hours ago   Up About a minute (healthy)   27017/tcp            mongo
+fbd49d420e59   mongo:5.0                                 "docker-entrypoint.s…"   45 hours ago   Up About a minute (healthy)   27017/tcp            mongo
 ```
 
 !!! tip

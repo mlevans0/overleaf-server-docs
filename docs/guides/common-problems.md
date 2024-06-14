@@ -4,19 +4,35 @@
 
 In this section, we aim to address frequently encountered issues that you may encounter while running your own on-premises version of Overleaf. 
 
-## CLSI ##
+## Recovering deleted docs ##
 
-Log location in the container: `/var/log/overleaf/clsi.log`
+Docs are logically deleted and will be in the `deletedDocs` array in the `project` document.
 
-### `(HTTP code 400) unexpected - OCI runtime create failed` ###
+List the deleted docs in mongo:
 
-**Snippet:** `...opt/synctex` ... `not a directory`
+```
+db.projects.findOne({_id: ObjectId("<project_id>")}, { deletedDocs: 1} )
+```
 
-Full message reads roughly (after removing quite a lot of noise):
+Then open a shell in the `sharelatex` container. From there you can run the `restore_soft_deleted_docs` script.
 
-> <path\> is not a directory; Are you trying to mount a directory onto a file (or vice-versa)? Check if the specified host path exists and is the expected type 
+You will need:
+- your admin user ID
+- the project ID
+- the list of doc names from `deletedDocs`
 
-Check the value of the `SYNCTEX_BIN_HOST_PATH` environment variable. For more information, please see [this documentation](https://github.com/overleaf/overleaf/wiki/Server-Pro:-sandboxed-compiles#mapping-the-location-of-synctex-in-the-host).
+
+Example restoring a deleted `restoreMe.tex` document:
+
+```
+node /var/www/sharelatex/web/scripts/restore_soft_deleted_docs.js <admin_id> <project_id> restoreMe.tex
+{ doc:
+   { _id: 5f91b367e86f6d0001680ecc,
+     name: '2020-10-22T16-29-27.066Z-restoreMe.tex' },
+  folderId: null }
+```
+
+This will have created a bunch of docs in the root of the project that look like TIMESTAMP-original-name. They should have the content and the tracked changes and comments from before deletion.
 
 ## Running Overleaf with an NFS filesystem ##
 
@@ -63,6 +79,8 @@ The full output will look something like this:
 1:C 11 Feb 2024 15:19:26.055 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
 ```
 If you see the line `Fatal: Can't initialize Background Jobs`, this may be related to the version of Docker currently in use. Updating to a version >=20.10.10 should resolve this issue.
+
+For more information, see the Redis upstream issue here: https://github.com/redis/redis/issues/12362
 
 ## Incorrect orientation of template gallery preview/thumbnail images ##
 

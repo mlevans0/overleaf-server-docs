@@ -1,10 +1,74 @@
+## Server Pro 5.0.5 ##
+
+Release date: 2024-06-11
+
+- Server Pro Image ID: `60da5806f83e`
+- Community Edition Image ID: `46bb44d4215d`
+- Git Bridge Image ID: `455a8c0559a4`
+
+This is a security release. We added stricter controls to prevent arbitrary CSS loading in the project editor.
+
+## Server Pro 5.0.4 ##
+
+Release date: 2024-05-24
+
+- Server Pro Image ID: `b0db0405a7ce`
+- Community Edition Image ID: `abcec6efbbf7`
+- Git Bridge Image ID: `455a8c0559a4`
+
+This release provides security updates, bug fixes, and performance enhancements, including:
+
+- Stricter controls to prevent arbitrary JavaScript execution in the browser.
+- Updated libraries to enhance security and performance.
+
+## Server Pro 5.0.3 ##
+
+Release date: 2024-04-24
+
+- Server Pro Image ID: `dc88a9ade14d`
+- Community Edition Image ID: `b4712d596c75`
+- Git Bridge Image ID: `455a8c0559a4`
+
+This release builds up on 5.0.2 and includes the second revision of the recovery process for doc versions.
+
+If you never ran Server Pro version 5.0.1 or Community Edition version 5.0.1, or you started a brand new instance with 5.0.1, you do not need to run this recovery process. Please see the [Bugfixes section for Server Pro 5.0.2 below for details on the need for a recovery](#bugfixes) and follow the [doc version recovery process](/guides/doc-version-recovery/).
+
+## Server Pro 5.0.2 **(Retracted)** ##
+
+!!! warning
+
+    2024-04-22: We are retracting version 5.0.2. We have identified a few corner cases in the recovery procedure for docs.
+
+    2024-04-24: Server Pro version 5.0.3 sports fixes for the previously identified corner cases.
+
+Release date: 2024-04-22
+
+- Server Pro Image ID: `06eed5680340`
+- Community Edition Image ID: `9f018f899ba5`
+- Git Bridge Image ID: `455a8c0559a4`
+
+### Security release ###
+
+**Server Pro 5.0.2 is a security release for the application runtime.**
+
+The Node.js runtime has been upgraded to `18.20.2`. Check their release notes ([`18.20.1`](https://nodejs.org/en/blog/release/v18.20.1), [`18.20.2`](https://nodejs.org/en/blog/release/v18.20.2)) for more information.
+
+### Bugfixes ###
+
+- Fixes database migration that resulted in the loss of doc versions. These are used by the history system and their loss resulted in the history system skipping over updates effectively resulting in no further changes to the history view and git-integration. This release fixes the database migration and also sports a recovery process for instances that ran release 5.0.1. If you ran version 5.0.1, please take a look at the dedicated [doc version recovery process](/guides/doc-version-recovery/).
+- Fixes `references` and `templates` services on Docker 26  ipv6.
+
+### Other changes ###
+
+- Adds `bin/flush-history-queues` and `bin/force-history-resyncs` utility scripts.
+
 ## Server Pro 5.0.1 **(Retracted)** ##
 
 !!! warning
 
     2024-04-18: We have identified a critical bug in a database migration that causes data loss. Please defer upgrading to release 5.0.1 until further notice on the mailing list. 
     
-    **Please hold on to any backups that were taken prior to upgrading to version 5.0.1.**
+    2024-04-24: Server Pro 5.0.3 has been released with a fix and recovery process that does not need access to a backup. See details above.
 
 Release date: 2024-04-02
 

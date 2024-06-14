@@ -1,3 +1,17 @@
+# Server Pro 4.2.5 ##
+
+Release date: 2024-06-11
+
+- Server Pro Image ID: `cbe8a3d11874`
+- Community Edition Image ID: `8ac3da599b94`
+- Git Bridge Image ID: `59a17a340612`
+
+This release provides security updates, bug fixes, and performance enhancements, including:
+
+- Stricter controls to prevent arbitrary JavaScript execution in the project editor.
+- Stricter controls to prevent arbitrary CSS loading in the project editor.
+- Updated libraries to enhance security and performance.
+
 ## Server Pro 4.2.4 ##
 
 Release date: 2024-04-17
@@ -294,6 +308,11 @@ MongoDB now needs to run as a Replica Set. If you use an external Mongo database
 
 We’ve also updated the version of Redis to `6.2`. This change requires no action other than updating the image version. If you’re using the Overleaf Toolkit, add the environment variable `REDIS_IMAGE=redis:6.2` to config/overleaf.rc (or update the version, if it was already defined). If you’re using a custom `docker-compose.yml`, change the `redis` container image to `redis:6.2`.
 
+!!! note
+
+    If upgrading to Redis 6.2 results in a restart loop, see this [article](/guides/common-problems/#upgrading-to-redis-62-results-in-a-restart-loop) in our [troubleshooting guide](/guides/common-problems/) for more information.
+
+
 ### New Features (Server Pro only) ###
 
 - [Overleaf Git integration](https://www.overleaf.com/learn/how-to/Using_Git_and_GitHub#The_Overleaf_Git-Bridge) – See the documentation for [instructions](https://github.com/overleaf/overleaf/wiki/Git-Integration) to set up the git-bridge in your Server Pro install. 
@@ -323,7 +342,7 @@ mongo:
     command: "--replSet overleaf"
 ```
 
-Restart the mongo container then start a mongo shell with `docker-compose exec -it mongo mongo`. In that shell, run the following command to initiate the replica set:
+Restart the mongo container then start a mongo shell with `docker-compose exec mongo mongo`. In that shell, run the following command to initiate the replica set:
 
 ```
 rs.initiate({ _id: "overleaf", members: [ { _id: 0, host: "mongo:27017" } ] })

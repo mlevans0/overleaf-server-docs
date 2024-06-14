@@ -7,6 +7,15 @@ Some times we need to change the schema of data in the database as we evolve Ove
 * **Mongo Database:** This is where user and project data reside.
 * **Redis:** serves as a high-performance cache for in-flight data, primarily storing information related to project editions and collaboration.
 * **Overleaf Filesystem:** stores non-editable project files (including images) and also acts as a temporary disk cache during project compilations.
+   
+    !!! note
+     
+         This might be `~/sharelatex_data` or `~/overleaf_data`, depending on when you're instance was setup.
+    
+    
+    !!! note
+    
+         For project files and full project history data we also support [S3 compatible storage backends](/configuration/s3).
 
 See [section "Folders in detail" for details](#Folders-in-detail) on the folder layout on disk.
 
