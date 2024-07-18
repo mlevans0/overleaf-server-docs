@@ -1,3 +1,82 @@
+## Server Pro  5.1.0 ##
+
+Release date: 2024-07-17
+
+- Server Pro Image ID: `7216db608356`
+- Community Edition Image ID: `41a77f59f69e`
+- Git Bridge Image ID: `4cd4bea6fb01`
+
+### MongoDB upgrade to v6 ###
+
+MongoDB 5 is reaching end of life on [October 2024](https://www.mongodb.com/legal/support-policy/lifecycles). All customers should upgrade to MongoDB 6.0. [Follow the link to the official documentation for instructions](https://github.com/overleaf/overleaf/wiki/Updating-Mongo-version).
+
+{{ versions['toolkit-short'] }} users now need to split the MongoDB image between `MONGO_IMAGE` (with just the image name) and `MONGO_VERSION` in their `config/overleaf.rc` file.
+
+Example:
+
+```
+# When using a custom image, MONGO_VERSION is required
+MONGO_IMAGE=my.docker.hub/mongo
+MONGO_VERSION=6.0-custom
+```
+
+Please ensure you have a [consistent database backup](/maintenance/data-and-backups/) before upgrading.
+
+### Redis AOF Persistence enabled by default ###
+
+AOF (Append Only File) persistence is now the recommended configuration for Redis persistence.
+
+{{ versions['toolkit-short'] }} users have AOF persistence enabled by default for new installs. Existing users are recommended to follow the instructions on the official documentation to switch to AOF: [https://redis.io/docs/latest/operate/oss_and_stack/management/persistence/#how-i-can-switch-to-aof-if-im-currently-using-dumprdb-snapshots](https://redis.io/docs/latest/operate/oss_and_stack/management/persistence/#how-i-can-switch-to-aof-if-im-currently-using-dumprdb-snapshots)
+
+### Deprecation for docker-compose v1 ###
+
+`docker-compose` v1 has reached its End Of Life in July 2023 (https://docs.docker.com/compose/migrate/). Support for `docker-compose` v1 in the Overleaf {{ versions['toolkit-short'] }} will be dropped with the release of Server Pro 5.2. We recommend upgrading to Docker Compose v2 before then.
+
+### New Features ###
+
+- SAML: multiple certificates are now supported. You can now set a list of comma-separated certificates in `OVERLEAF_SAML_SIGNING_CERT` and `OVERLEAF_SAML_CERT`
+- CSP (Content Security Policy) is now enabled by default. 
+
+### Bugfixes ###
+
+- Fixes a bug where projects created before enabling the templates feature couldn't be published as templates.
+- Fixed spacing in project list footer.
+- Fixed post-login redirection when login after clicking the "Log in" button in the header. 
+
+### Other changes ###
+
+- Removed support for running LaTeX compiles with Docker-In-Docker in Server Pro. Sandboxed compiles using "sibling" containers is not affected by this.
+- TeXLive images, as used for Sandboxed compiles, need to be pulled outside of Server Pro now. The Overleaf {{ versions['toolkit-short'] }} is pulling all configured images as part of `bin/up`. All customers have been granted read access to quay.io/sharelatex/texlive-full.
+- Stricter and faster graceful shutdown procedure for the Server Pro container
+- The environment variable `SYNCTEX_BIN_HOST_PATH` is no longer used by the application
+- We are sunsetting window properties like `window.project_id`. If you need access to any of these, please reach out to [support@overleaf.com](mailto:support@overleaf.com) to discuss options.
+- Significant reduction in Docker image size for Server Pro and CE
+- Security updates to the base image and installed dependencies.
+- Minor improvements and bugfixes. 
+
+
+## Server Pro 5.0.7 ##
+
+Release date: 2024-07-12
+
+- Server Pro Image ID: `a8c301474a4d`
+- Community Edition Image ID: `6f3e55a67fd5`
+- Git Bridge Image ID: `455a8c0559a4 `
+
+This is a security release. We added stricter controls for accessing project invite details and locked down access to files via the LaTeX compilation service.
+
+We strongly recommend turning on the [Sandboxed compiles feature](https://github.com/overleaf/overleaf/wiki/Server-Pro:-Sandboxed-Compiles) in Server Pro.
+
+## Server Pro 5.0.6 ##
+
+Release date: 2024-06-20
+
+- Server Pro Image ID: `c9de60b06959`
+- Community Edition Image ID: `46bb44d4215d`
+- Git Bridge Image ID: `455a8c0559a4`
+
+This is a security release. We added stricter controls for creating projects from ZIP URLs.
+
 ## Server Pro 5.0.5 ##
 
 Release date: 2024-06-11
@@ -86,7 +165,7 @@ This major release includes the following changes:
 - Rebranding of `SHARELATEX_*` to `OVERLEAF_*` environment variables
 - Rebranding of filesystem paths from ShareLaTeX brand to Overleaf brand
 
-**Important**: the [Overleaf Toolkit](https://github.com/overleaf/toolkit) will help migrating your configuration, please follow the prompts of `bin/upgrade`.
+**Important**: the [{{ versions['toolkit-short'] }}](https://github.com/overleaf/toolkit) will help migrating your configuration, please follow the prompts of `bin/upgrade`.
 
 ### MongoDB upgrade to v5 ###
 
@@ -94,7 +173,7 @@ MongoDB 4.4 has reached end of life on February 2024. All customers should [upgr
 
 The release also includes migrations that update the database in a backwards incompatible format. 
 
-Please ensure you have a [database backup](https://github.com/overleaf/overleaf/wiki/Data-and-Backups) before upgrading. In case of roll-back, you will need to restore the database backup. Server Pro 4.x is not capable of reading the new format, which can result in data-loss or broken projects.
+Please ensure you have a [consistent database backup](/maintenance/data-and-backups/) before upgrading. In case of roll-back, you will need to restore the database backup. Server Pro 4.x is not capable of reading the new format, which can result in data-loss or broken projects.
 
 ### Configuration changes ###
 

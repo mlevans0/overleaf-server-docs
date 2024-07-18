@@ -55,7 +55,17 @@ For {{ versions['toolkit-short'] }} deployments, the path where your non-editabl
 
 ## Redis ##
 
-Redis stores user sessions and pending document updates before they are flushed to MongoDB. To backup redis, you will need to copy the **RDB** file to a secure location. For {{ versions['toolkit-short'] }} deployments, the path where this file is stored is specified in `config/overleaf.rc` using the `REDIS_DATA_PATH` environment variable.
+Redis stores user sessions and pending document updates before they are flushed to MongoDB. 
+
+### AOF (Append Only File) ###
+
+AOF (Append Only File) persistence is the recommended configuration for Redis persistence.
+
+[{{ versions['toolkit-short'] }}](https://github.com/overleaf/toolkit) users have AOF persistence enabled by default for new installs. Existing users are recommended to follow the instructions on the official documentation to switch to AOF:
+
+[https://redis.io/docs/latest/operate/oss_and_stack/management/persistence/#how-i-can-switch-to-aof-if-im-currently-using-dumprdb-snapshots](https://redis.io/docs/latest/operate/oss_and_stack/management/persistence/#how-i-can-switch-to-aof-if-im-currently-using-dumprdb-snapshots)
+
+If you decide to continue using RDB snapshots along with AOF persistence you can copy the RDB file to a secure location as a backup.
 
 ## Migrating data between servers ##
 
