@@ -1,0 +1,3259 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../Release-Notes-5.x.x/">
+      
+      
+        <link rel="next" href="../Release-Notes-3.x.x/">
+      
+      
+      <link rel="icon" href="../../assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.29">
+    
+    
+      
+        <title>4.x.x - Overleaf Server Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.76a95c52.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+  
+  
+    
+    
+      
+    
+    
+  
+  
+  <style>.md-tag.md-tag--server_pro{--md-tag-icon:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M0 80v149.5c0 17 6.7 33.3 18.7 45.3l176 176c25 25 65.5 25 90.5 0l133.5-133.5c25-25 25-65.5 0-90.5l-176-176c-12-12-28.3-18.7-45.3-18.7H48C21.5 32 0 53.5 0 80zm112 32a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"/></svg>');}</style>
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#server-pro-425" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Overleaf Server Docs" class="md-header__button md-logo" aria-label="Overleaf Server Docs" data-md-component="logo">
+      
+  <img src="../../assets/overleaf-logo-white.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Overleaf Server Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              4.x.x
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="green" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/mlevans0/overleaf-server-docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../.." class="md-tabs__link">
+          
+  
+  Home
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../getting-started/" class="md-tabs__link">
+          
+  
+  Getting started
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../installation/using-the-toolkit/" class="md-tabs__link">
+          
+  
+  Installation
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../configuration/overleaf-toolkit/" class="md-tabs__link">
+          
+  
+  Configuration
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../maintenance/data-and-backups/" class="md-tabs__link">
+          
+  
+  Maintenance
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../guides/for-users/" class="md-tabs__link">
+          
+  
+  Guides
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../Release-Notes-5.x.x/" class="md-tabs__link">
+          
+  
+  Release notes
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Overleaf Server Docs" class="md-nav__button md-logo" aria-label="Overleaf Server Docs" data-md-component="logo">
+      
+  <img src="../../assets/overleaf-logo-white.svg" alt="logo">
+
+    </a>
+    Overleaf Server Docs
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/mlevans0/overleaf-server-docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Home
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Welcome
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Getting started
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Getting started
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Planning for success
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/what-skills-do-i-need/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    What skills do I need?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/hardware-requirements/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hardware requirements
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/software-requirements/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Software requirements
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/microservices/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overleaf microservices
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Installation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Installation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../installation/using-the-toolkit/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Using the Overleaf Toolkit
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../installation/post-installation-tasks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Post-installation tasks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Configuration
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Configuration
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Overleaf Toolkit
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            Overleaf Toolkit
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../configuration/overleaf-toolkit/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Files and locations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../configuration/toolkit-settings/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Toolkit settings
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../configuration/branding/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Branding
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../configuration/tls-proxy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    TLS Proxy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../configuration/email/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Configuring email
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../configuration/s3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Configuring S3
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_6" id="__nav_4_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Server Pro
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_6">
+            <span class="md-nav__icon md-icon"></span>
+            Server Pro
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../configuration/getting-server-pro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting Server Pro
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../configuration/sandboxed-compiles/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sandboxed Compiles
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../configuration/ldap/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LDAP/AD
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../configuration/saml2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SAML 2.0
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../configuration/templates-system/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Templates system
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../configuration/git-bridge/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Git integration
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../configuration/adding-learn-pages/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Adding Learn pages
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../configuration/environment-variables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Environment variables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../configuration/localization/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Localization
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../configuration/logging/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Logging
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Maintenance
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Maintenance
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../maintenance/data-and-backups/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data and Backups
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../maintenance/email-migration/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Email migration
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../maintenance/docker-compose-to-toolkit-migration/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Docker Compose to Toolkit migration
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../maintenance/updating-mongodb/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Updating MongoDB
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../maintenance/s3-migration/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    S3 migration
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../maintenance/horizontal-scaling/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Horizontal scaling
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Guides
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Guides
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides/for-users/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    For users
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    For administrators
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_2">
+            <span class="md-nav__icon md-icon"></span>
+            For administrators
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides/user-management/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    User management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides/project-management/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Project management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides/doc-version-recovery/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Doc version recovery
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides/full-project-history-migration/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Full project history migration
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_2_5" id="__nav_6_2_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Troubleshooting
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_6_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            Troubleshooting
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides/troubleshooting/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gathering information
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides/common-problems/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Common problems
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Release notes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Release notes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Release-Notes-5.x.x/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5.x.x
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    4.x.x
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    4.x.x
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#server-pro-424" class="md-nav__link">
+    <span class="md-ellipsis">
+      Server Pro 4.2.4
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Server Pro 4.2.4">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#security-release" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security release
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Other changes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#server-pro-423" class="md-nav__link">
+    <span class="md-ellipsis">
+      Server Pro 4.2.3
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Server Pro 4.2.3">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#security-release_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security release
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#server-pro-422" class="md-nav__link">
+    <span class="md-ellipsis">
+      Server Pro 4.2.2
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#server-pro-421" class="md-nav__link">
+    <span class="md-ellipsis">
+      Server Pro 4.2.1
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#server-pro-420" class="md-nav__link">
+    <span class="md-ellipsis">
+      Server Pro 4.2.0
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Server Pro 4.2.0">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#new-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      New Features
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="New Features">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#toolbar-in-code-editor" class="md-nav__link">
+    <span class="md-ellipsis">
+      Toolbar in Code Editor
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-and-edit-tables-without-writing-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Add and edit tables without writing code
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#new-toolbar-option-insert-figure" class="md-nav__link">
+    <span class="md-ellipsis">
+      New toolbar option: Insert figure
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#symbol-preview-in-editor-autocomplete" class="md-nav__link">
+    <span class="md-ellipsis">
+      Symbol preview in editor autocomplete
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bugfixes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bugfixes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other-changes_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Other changes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#server-pro-416" class="md-nav__link">
+    <span class="md-ellipsis">
+      Server Pro 4.1.6
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#server-pro-415" class="md-nav__link">
+    <span class="md-ellipsis">
+      Server Pro 4.1.5
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#server-pro-414" class="md-nav__link">
+    <span class="md-ellipsis">
+      Server Pro 4.1.4
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#server-pro-413" class="md-nav__link">
+    <span class="md-ellipsis">
+      Server Pro 4.1.3
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#server-pro-412" class="md-nav__link">
+    <span class="md-ellipsis">
+      Server Pro 4.1.2
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#server-pro-411" class="md-nav__link">
+    <span class="md-ellipsis">
+      Server Pro 4.1.1
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Server Pro 4.1.1">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bugfixes_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bugfixes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#server-pro-410" class="md-nav__link">
+    <span class="md-ellipsis">
+      Server Pro 4.1.0
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Server Pro 4.1.0">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#security-release_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security release
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#history-migration" class="md-nav__link">
+    <span class="md-ellipsis">
+      History migration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="History migration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#history-cleanup" class="md-nav__link">
+    <span class="md-ellipsis">
+      History cleanup
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#upcoming-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Upcoming changes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other-changes_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Other changes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#server-pro-406" class="md-nav__link">
+    <span class="md-ellipsis">
+      Server Pro 4.0.6
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#server-pro-405" class="md-nav__link">
+    <span class="md-ellipsis">
+      Server Pro 4.0.5
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Server Pro 4.0.5">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bugfixes_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bugfixes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other-changes_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Other changes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#server-pro-404" class="md-nav__link">
+    <span class="md-ellipsis">
+      Server Pro 4.0.4
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#server-pro-403" class="md-nav__link">
+    <span class="md-ellipsis">
+      Server Pro 4.0.3
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#server-pro-402" class="md-nav__link">
+    <span class="md-ellipsis">
+      Server Pro 4.0.2
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#server-pro-401" class="md-nav__link">
+    <span class="md-ellipsis">
+      Server Pro 4.0.1
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Server Pro 4.0.1">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#new-features-server-pro-only" class="md-nav__link">
+    <span class="md-ellipsis">
+      New Features (Server Pro only)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#new-features-for-overleaf-community-edition-and-server-pro" class="md-nav__link">
+    <span class="md-ellipsis">
+      New Features for Overleaf Community Edition and Server Pro
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other-changes_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Other changes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manually-setting-up-mongodb-as-a-replica-set" class="md-nav__link">
+    <span class="md-ellipsis">
+      Manually setting up MongoDB as a replica set
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Release-Notes-3.x.x/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3.x.x
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Release-Notes-2.0/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.x.x
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Release-Notes---1.0.0/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.0.0
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Release-Notes---0.6.0/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    0.6.0
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Release-Notes---0.5.0/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    0.5.0
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Release-Notes---0.4.0/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    0.4.0
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Release-Notes---0.3.0/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    0.3.0
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Release-Notes---0.2.0/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    0.2.0
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Release-Notes---0.1.3-and-0.1.4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    0.1.3 and 0.1.4
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Release-Notes---0.1.2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    0.1.2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#server-pro-424" class="md-nav__link">
+    <span class="md-ellipsis">
+      Server Pro 4.2.4
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Server Pro 4.2.4">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#security-release" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security release
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Other changes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#server-pro-423" class="md-nav__link">
+    <span class="md-ellipsis">
+      Server Pro 4.2.3
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Server Pro 4.2.3">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#security-release_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security release
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#server-pro-422" class="md-nav__link">
+    <span class="md-ellipsis">
+      Server Pro 4.2.2
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#server-pro-421" class="md-nav__link">
+    <span class="md-ellipsis">
+      Server Pro 4.2.1
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#server-pro-420" class="md-nav__link">
+    <span class="md-ellipsis">
+      Server Pro 4.2.0
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Server Pro 4.2.0">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#new-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      New Features
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="New Features">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#toolbar-in-code-editor" class="md-nav__link">
+    <span class="md-ellipsis">
+      Toolbar in Code Editor
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-and-edit-tables-without-writing-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Add and edit tables without writing code
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#new-toolbar-option-insert-figure" class="md-nav__link">
+    <span class="md-ellipsis">
+      New toolbar option: Insert figure
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#symbol-preview-in-editor-autocomplete" class="md-nav__link">
+    <span class="md-ellipsis">
+      Symbol preview in editor autocomplete
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bugfixes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bugfixes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other-changes_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Other changes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#server-pro-416" class="md-nav__link">
+    <span class="md-ellipsis">
+      Server Pro 4.1.6
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#server-pro-415" class="md-nav__link">
+    <span class="md-ellipsis">
+      Server Pro 4.1.5
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#server-pro-414" class="md-nav__link">
+    <span class="md-ellipsis">
+      Server Pro 4.1.4
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#server-pro-413" class="md-nav__link">
+    <span class="md-ellipsis">
+      Server Pro 4.1.3
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#server-pro-412" class="md-nav__link">
+    <span class="md-ellipsis">
+      Server Pro 4.1.2
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#server-pro-411" class="md-nav__link">
+    <span class="md-ellipsis">
+      Server Pro 4.1.1
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Server Pro 4.1.1">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bugfixes_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bugfixes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#server-pro-410" class="md-nav__link">
+    <span class="md-ellipsis">
+      Server Pro 4.1.0
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Server Pro 4.1.0">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#security-release_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security release
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#history-migration" class="md-nav__link">
+    <span class="md-ellipsis">
+      History migration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="History migration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#history-cleanup" class="md-nav__link">
+    <span class="md-ellipsis">
+      History cleanup
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#upcoming-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Upcoming changes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other-changes_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Other changes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#server-pro-406" class="md-nav__link">
+    <span class="md-ellipsis">
+      Server Pro 4.0.6
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#server-pro-405" class="md-nav__link">
+    <span class="md-ellipsis">
+      Server Pro 4.0.5
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Server Pro 4.0.5">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bugfixes_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bugfixes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other-changes_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Other changes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#server-pro-404" class="md-nav__link">
+    <span class="md-ellipsis">
+      Server Pro 4.0.4
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#server-pro-403" class="md-nav__link">
+    <span class="md-ellipsis">
+      Server Pro 4.0.3
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#server-pro-402" class="md-nav__link">
+    <span class="md-ellipsis">
+      Server Pro 4.0.2
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#server-pro-401" class="md-nav__link">
+    <span class="md-ellipsis">
+      Server Pro 4.0.1
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Server Pro 4.0.1">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#new-features-server-pro-only" class="md-nav__link">
+    <span class="md-ellipsis">
+      New Features (Server Pro only)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#new-features-for-overleaf-community-edition-and-server-pro" class="md-nav__link">
+    <span class="md-ellipsis">
+      New Features for Overleaf Community Edition and Server Pro
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other-changes_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Other changes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manually-setting-up-mongodb-as-a-replica-set" class="md-nav__link">
+    <span class="md-ellipsis">
+      Manually setting up MongoDB as a replica set
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/mlevans0/overleaf-server-docs/edit/main/docs/release-notes/Release-Notes-4.x.x.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="server-pro-425">Server Pro 4.2.5<a class="headerlink" href="#server-pro-425" title="Permanent link">&para;</a></h1>
+<p>Release date: 2024-06-11</p>
+<ul>
+<li>Server Pro Image ID: <code>cbe8a3d11874</code></li>
+<li>Community Edition Image ID: <code>8ac3da599b94</code></li>
+<li>Git Bridge Image ID: <code>59a17a340612</code></li>
+</ul>
+<p>This release provides security updates, bug fixes, and performance enhancements, including:</p>
+<ul>
+<li>Stricter controls to prevent arbitrary JavaScript execution in the project editor.</li>
+<li>Stricter controls to prevent arbitrary CSS loading in the project editor.</li>
+<li>Updated libraries to enhance security and performance.</li>
+</ul>
+<h2 id="server-pro-424">Server Pro 4.2.4<a class="headerlink" href="#server-pro-424" title="Permanent link">&para;</a></h2>
+<p>Release date: 2024-04-17</p>
+<ul>
+<li>Server Pro Image ID: <code>875dd6e64e96</code></li>
+<li>Community Edition Image ID: <code>ab1e82612ec9</code></li>
+<li>Git Bridge Image ID: <code>455a8c0559a4</code></li>
+</ul>
+<h3 id="security-release">Security release<a class="headerlink" href="#security-release" title="Permanent link">&para;</a></h3>
+<p><strong>Server Pro 4.2.4 is a security release for the application runtime.</strong></p>
+<p>The Node.js runtime has been upgraded to <code>18.20.2</code>. Check the release notes (<a href="https://nodejs.org/en/blog/release/v18.20.1"><code>18.20.1</code></a>, <a href="https://nodejs.org/en/blog/release/v18.20.2"><code>18.20.2</code></a>) for more information.</p>
+<h3 id="other-changes">Other changes<a class="headerlink" href="#other-changes" title="Permanent link">&para;</a></h3>
+<ul>
+<li>All services are now using IPv4 in the container</li>
+<li>Adds <code>bin/flush-history-queues</code> and <code>bin/force-history-resyncs</code> utility scripts.</li>
+</ul>
+<h2 id="server-pro-423">Server Pro 4.2.3<a class="headerlink" href="#server-pro-423" title="Permanent link">&para;</a></h2>
+<p>Release date: 2024-02-16</p>
+<ul>
+<li>Server Pro Image ID: <code>a251a3f77aaa</code></li>
+<li>Community Edition Image ID: <code>168968a20483</code></li>
+<li>Git Bridge Image ID: <code>59a17a340612</code></li>
+</ul>
+<h3 id="security-release_1">Security release<a class="headerlink" href="#security-release_1" title="Permanent link">&para;</a></h3>
+<p><strong>Server Pro 4.2.3 is a security release for the application runtime.</strong></p>
+<p>The Node.js runtime has been upgraded to 18.19.1 as per the <a href="https://nodejs.org/en/blog/vulnerability/february-2024-security-releases/">security announcement upstream</a>. It is worth noting that only CVE-2024-22019, a Denial of Service vulnerability, is applicable to Server Pro.</p>
+<p><strong>If an access point to your Server Pro instance is publicly accessible via the internet</strong>, such as a login page or redirect to it, it is particularly important that you upgrade to Server Pro version 4.2.3.</p>
+<h2 id="server-pro-422">Server Pro 4.2.2<a class="headerlink" href="#server-pro-422" title="Permanent link">&para;</a></h2>
+<p>Release date: 2024-02-07</p>
+<ul>
+<li>Server Pro Image ID: <code>166a56c173a1</code></li>
+<li>Community Edition Image ID: <code>f33f1873b490</code></li>
+<li>Git Bridge Image ID: <code>59a17a340612</code></li>
+</ul>
+<p>This release increases security against brute force attacks on projects with link-sharing enabled.</p>
+<p><strong>If your Server Pro instance is configured with link-sharing enabled</strong>, using <code>SHARELATEX_ALLOW_PUBLIC_ACCESS=true</code>, it is particularly important that you upgrade to Server Pro version 4.2.2.</p>
+<p>We would also like to highlight a required upgrade of MongoDB to version 5.0 for the next Server Pro release. MongoDB 4.4 reaches end of life this month, February 2024. We recommend that all customers <a href="https://github.com/overleaf/overleaf/wiki/Updating-Mongo-version">upgrade to MongoDB 5.0</a> at their earliest convenience.</p>
+<h2 id="server-pro-421">Server Pro 4.2.1<a class="headerlink" href="#server-pro-421" title="Permanent link">&para;</a></h2>
+<p>Release date:  2023-11-23</p>
+<ul>
+<li>Server Pro Image ID: <code>3a75a815d297</code></li>
+<li>Community Edition Image ID: <code>ae1b8c082224</code></li>
+<li>Git Bridge Image ID: <code>59a17a340612</code></li>
+</ul>
+<p>This release restores public access to the <code>/saml/meta</code> endpoint.</p>
+<h2 id="server-pro-420">Server Pro 4.2.0<a class="headerlink" href="#server-pro-420" title="Permanent link">&para;</a></h2>
+<p>Release date: 2023-11-10</p>
+<ul>
+<li>Server Pro Image ID: <code>8bdf368e59f4</code></li>
+<li>Community Edition Image ID: <code>ae1b8c082224</code></li>
+<li>Git Bridge Image ID: <code>59a17a340612</code></li>
+</ul>
+<p>This release separates the web service into an internal API service and a user facing service. Most of the changes in this regard are behind the scenes. The Git integration in Server Pro talks to the Server Pro container "from the outside" and its config needs changing.</p>
+<ul>
+<li>Toolkit users: please upgrade the toolkit (<code>bin/upgrade</code>) before upgrading to Server Pro 4.2.0.</li>
+<li><code>docker-compose</code> deployments: please update the contents of the <code>GIT_BRIDGE_API_BASE_URL</code> variable:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="gd">-GIT_BRIDGE_API_BASE_URL: &quot;http://sharelatex/api/v0/&quot;</span>
+<span class="gi">+GIT_BRIDGE_API_BASE_URL: &quot;http://sharelatex:3000/api/v0/&quot;</span>
+</code></pre></div>
+<h3 id="new-features">New Features<a class="headerlink" href="#new-features" title="Permanent link">&para;</a></h3>
+<h4 id="toolbar-in-code-editor">Toolbar in Code Editor<a class="headerlink" href="#toolbar-in-code-editor" title="Permanent link">&para;</a></h4>
+<p>A toolbar has been added to the Code Editor, which provides buttons for basic text styling, and inserting special characters, figures, code for tables, citations, and more.</p>
+<h4 id="add-and-edit-tables-without-writing-code">Add and edit tables without writing code<a class="headerlink" href="#add-and-edit-tables-without-writing-code" title="Permanent link">&para;</a></h4>
+<p>An easier way to create and edit tables is now available in Server Pro. You can also copy and paste tables and formatted text directly into Visual Editor, without losing the formatting.</p>
+<p>Check the <a href="https://www.overleaf.com/blog/major-feature-news-add-and-edit-tables-without-writing-code">blog post</a> for more information.</p>
+<h4 id="new-toolbar-option-insert-figure">New toolbar option: Insert figure<a class="headerlink" href="#new-toolbar-option-insert-figure" title="Permanent link">&para;</a></h4>
+<p>The new Insert figure feature allows user to upload or just copy and paste an image file from your computer directly into the editor.</p>
+<p>Please refer to the <a href="https://www.overleaf.com/blog/an-easier-way-to-insert-figures-in-overleaf">blog post</a> for more information.</p>
+<h4 id="symbol-preview-in-editor-autocomplete">Symbol preview in editor autocomplete<a class="headerlink" href="#symbol-preview-in-editor-autocomplete" title="Permanent link">&para;</a></h4>
+<p>Math symbols are now previewed along with the autocomplete options in the editor.</p>
+<h3 id="bugfixes">Bugfixes<a class="headerlink" href="#bugfixes" title="Permanent link">&para;</a></h3>
+<ul>
+<li>XeLatex is now available in the default Tex Live install when not using Sandboxed Compiles.</li>
+</ul>
+<h3 id="other-changes_1">Other changes<a class="headerlink" href="#other-changes_1" title="Permanent link">&para;</a></h3>
+<p>As announced with the <a href="https://github.com/overleaf/overleaf/wiki/Release-Notes--4.x.x/_edit#upcoming-changes">previous Server Pro release</a>, the legacy source editor has been removed from the editor. You can read more about the new editing experience <a href="https://www.overleaf.com/blog/towards-the-future-a-new-source-editor">on our blog</a>.</p>
+<p>The new release also includes the following changes:</p>
+<ul>
+<li>Session length can now be configured with <code>SHARELATEX_COOKIE_SESSION_LENGTH</code>.</li>
+<li>Node runtime has been updated to v18.18.2</li>
+</ul>
+<h2 id="server-pro-416">Server Pro 4.1.6<a class="headerlink" href="#server-pro-416" title="Permanent link">&para;</a></h2>
+<p>Release date:  2023-11-02</p>
+<ul>
+<li>Server Pro Image ID: <code>e40c0df3207f</code></li>
+<li>Community Edition Image ID: <code>50437e9a470c</code></li>
+<li>Git Bridge Image ID: <code>f499a7ef6e64</code></li>
+</ul>
+<p>This release adds several dependency patches bringing performance improvements in different parts of the application.</p>
+<h2 id="server-pro-415">Server Pro 4.1.5<a class="headerlink" href="#server-pro-415" title="Permanent link">&para;</a></h2>
+<p>Release date:  2023-10-25</p>
+<ul>
+<li>Server Pro Image ID: <code>47246d85316b</code></li>
+<li>Community Edition Image ID: <code>d909899af648</code></li>
+<li>Git Bridge Image ID: <code>f499a7ef6e64</code></li>
+</ul>
+<p>This release includes a bug-fix for streaming compression in the history system that could result in hanging flushes. History changes will accumulate in Redis and do not get flushed for permanent storage on disk/<a href="https://github.com/overleaf/overleaf/wiki/S3">S3</a>, leading to potential data-loss when Redis runs out of memory. </p>
+<p>We advise all customers to upgrade to this release at their earliest convenience.</p>
+<h2 id="server-pro-414">Server Pro 4.1.4<a class="headerlink" href="#server-pro-414" title="Permanent link">&para;</a></h2>
+<p>Release date:  2023-10-24</p>
+<ul>
+<li>Server Pro Image ID: <code>ef772a5f1148</code></li>
+<li>Community Edition Image ID: <code>1bcb24c3b31a</code></li>
+<li>Git Bridge Image ID: <code>f499a7ef6e64</code></li>
+</ul>
+<p>This release includes additional logging and a new config option for a request timeout.</p>
+<h2 id="server-pro-413">Server Pro 4.1.3<a class="headerlink" href="#server-pro-413" title="Permanent link">&para;</a></h2>
+<p>Release date:  2023-10-06</p>
+<ul>
+<li>Server Pro Image ID: <code>6661a336d695</code></li>
+<li>Community Edition Image ID: <code>e46e0cf12e97</code></li>
+<li>Git Bridge Image ID: <code>f499a7ef6e64</code></li>
+</ul>
+<p>This release includes a fix for the history soft retry cronjob, which was executing the operation as a hard retry.</p>
+<h2 id="server-pro-412">Server Pro 4.1.2<a class="headerlink" href="#server-pro-412" title="Permanent link">&para;</a></h2>
+<p>Release date: 2023-09-27</p>
+<ul>
+<li>Server Pro Image ID: <code>fab9def8230a</code></li>
+<li>Community Edition Image ID: <code>1ce6ef6ea798</code></li>
+<li>Git Bridge Image ID: <code>f499a7ef6e64</code></li>
+</ul>
+<p>This release includes security updates for the Git Bridge.</p>
+<h2 id="server-pro-411">Server Pro 4.1.1<a class="headerlink" href="#server-pro-411" title="Permanent link">&para;</a></h2>
+<p>Release date: 2023-09-05</p>
+<ul>
+<li>Server Pro Image ID: <code>fab9def8230a</code></li>
+<li>Community Edition Image ID: <code>1ce6ef6ea798</code></li>
+<li>Git Bridge Image ID: <code>e5e9753fc979</code></li>
+</ul>
+<h3 id="bugfixes_1">Bugfixes<a class="headerlink" href="#bugfixes_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Hide tabs on user admin info pages that are only relevant for overleaf.com</li>
+</ul>
+<h2 id="server-pro-410">Server Pro 4.1.0<a class="headerlink" href="#server-pro-410" title="Permanent link">&para;</a></h2>
+<p>Release date: 2023-08-24</p>
+<ul>
+<li>Server Pro Image ID: <code>a6c6bfe92bd1</code></li>
+<li>Community Edition Image ID: <code>1ce6ef6ea798</code></li>
+<li>Git Bridge Image ID: <code>e5e9753fc979</code></li>
+</ul>
+<h3 id="security-release_2">Security release<a class="headerlink" href="#security-release_2" title="Permanent link">&para;</a></h3>
+<p><strong>Server Pro 4.1 is a security release for the application runtime.</strong></p>
+<p>The Node.js runtime has been upgraded from version 16 to 18 ahead of the upcoming <a href="https://nodejs.org/en/blog/announcements/nodejs16-eol">deprecation of Node.js 16 on September 11, 2023</a>.</p>
+<p>Only Server Pro 4.1 will operate with Node.js 18. All other supported versions of Server Pro require Node.js 16, which is being deprecated. <strong>We recommend that all customers upgrade to Server Pro 4.1 at their earliest convenience.</strong></p>
+<p><strong>If an access point to your Server Pro instance is publicly accessible via the internet</strong>, such as a login page or redirect to it, it is particularly important that you upgrade to Server Pro version 4.1 before September 11, 2023.</p>
+<h3 id="history-migration">History migration<a class="headerlink" href="#history-migration" title="Permanent link">&para;</a></h3>
+<p><strong>Reminder: History migration for Server Pro 3.5.X and earlier</strong></p>
+<p>If you are still using a Server Pro version before 4.0, we recommend starting with the upgrade process immediately. In Server Pro 4.0 we introduced a breaking change in the history system that requires <a href="https://github.com/overleaf/overleaf/wiki/Full-Project-History-Migration">migrating all the history data into the new system</a> in order for Server Pro to function. </p>
+<p>The migration process can handle the majority of project histories without any manual work. However, very old projects can contain data that require additional steps to migrate. Starting the migration process now will give our support team adequate time to take a look into your migration issues and help you finish the migration ahead of the EOL date.</p>
+<h4 id="history-cleanup">History cleanup<a class="headerlink" href="#history-cleanup" title="Permanent link">&para;</a></h4>
+<p><strong>Cleanup of orphaned data</strong></p>
+<p>Server Pro versions 3.5.11, 4.0.6 and the latest 4.1 release include an updated script that fully deletes orphaned mongo data from the old history system. It is safe to run the script again. Please refer to <a href="https://github.com/overleaf/overleaf/wiki/Full-Project-History-Migration#clean-up-legacy-history-data">the documentation</a> on how to run the cleanup script.</p>
+<h3 id="upcoming-changes">Upcoming changes<a class="headerlink" href="#upcoming-changes" title="Permanent link">&para;</a></h3>
+<p><strong>Retirement of legacy source editor</strong></p>
+<p>Server Pro 4.1 will be the last release with the legacy source editor. You can read more about the new editing experience <a href="https://www.overleaf.com/blog/towards-the-future-a-new-source-editor">on our blog</a>.</p>
+<h3 id="other-changes_2">Other changes<a class="headerlink" href="#other-changes_2" title="Permanent link">&para;</a></h3>
+<p><strong>Rich Text/Visual Editor enhancements</strong></p>
+<ul>
+<li>The Rich Text/Visual editing experience has been improved. </li>
+<li>The "Source" editor has been renamed to "Code Editor" and the "Rich Text" editor has been renamed to "Visual Editor".</li>
+</ul>
+<h2 id="server-pro-406">Server Pro 4.0.6<a class="headerlink" href="#server-pro-406" title="Permanent link">&para;</a></h2>
+<p>Release date: 2023-08-10</p>
+<p>Image ID: <code>da6f6f617532</code> (Community Edition Image ID: <code>504b19c82c27</code>)</p>
+<ul>
+<li>Bring back the <a href="https://github.com/overleaf/overleaf/wiki/Full-Project-History-Migration#clean-up-legacy-history-data">History Migration Cleanup Script</a> with a fix to free up mongo storage space.</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>We advise customers to re-run the script again as per the documentation.</p>
+</div>
+<h2 id="server-pro-405">Server Pro 4.0.5<a class="headerlink" href="#server-pro-405" title="Permanent link">&para;</a></h2>
+<p>Release date:  2023-07-20</p>
+<ul>
+<li>Server Pro Image ID: <code>bd37a572f01a</code></li>
+<li>Community Edition Image ID: <code>883bb853c896</code></li>
+<li>Git Bridge Image ID: <code>9bfd98050a43</code></li>
+</ul>
+<h3 id="bugfixes_2">Bugfixes<a class="headerlink" href="#bugfixes_2" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Fixes numbers replaced by underscores when downloading projects (<a href="https://github.com/overleaf/overleaf/issues/1133">overleaf/overleaf/issues/1133</a>).</li>
+</ul>
+<h3 id="other-changes_3">Other changes<a class="headerlink" href="#other-changes_3" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Security updates.</li>
+</ul>
+<h2 id="server-pro-404">Server Pro 4.0.4<a class="headerlink" href="#server-pro-404" title="Permanent link">&para;</a></h2>
+<p>Release date: 2023-07-14</p>
+<ul>
+<li>Server Pro Image ID: <code>bcec664460d0</code></li>
+<li>Community Edition Image ID: <code>1cf00822f942</code></li>
+<li>Git Bridge Image ID: <code>9bfd98050a43</code></li>
+</ul>
+<p>This release includes security updates.</p>
+<h2 id="server-pro-403">Server Pro 4.0.3<a class="headerlink" href="#server-pro-403" title="Permanent link">&para;</a></h2>
+<p>Release date: 2023-06-29</p>
+<ul>
+<li>Server Pro Image ID: <code>963eb95c3c86</code></li>
+<li>Community Edition Image ID: <code>380e3cb72a42</code></li>
+<li>Git Bridge Image ID: <code>9bfd98050a43</code></li>
+</ul>
+<p>Fixes a bug preventing anonymous users from adding changes to the Project History.</p>
+<h2 id="server-pro-402">Server Pro 4.0.2<a class="headerlink" href="#server-pro-402" title="Permanent link">&para;</a></h2>
+<p>Release date: 2023-06-08</p>
+<ul>
+<li>Server Pro Image ID: <code>aa27991a39a7</code></li>
+<li>Community Edition Image ID: <code>26c75dfb6485</code></li>
+<li>Git Bridge Image ID: <code>9bfd98050a43</code></li>
+</ul>
+<p>Fixes a bug navigating through the documentation pages when <code>SHARELATEX_PROXY_LEARN=true</code>.</p>
+<h2 id="server-pro-401">Server Pro 4.0.1<a class="headerlink" href="#server-pro-401" title="Permanent link">&para;</a></h2>
+<p>Release date: 2023-05-30</p>
+<ul>
+<li>Server Pro Image ID: <code>3014d696b579</code> </li>
+<li>Community Edition Image ID: <code>26c75dfb6485</code></li>
+<li>Git Bridge Image ID: <code>9bfd98050a43</code></li>
+</ul>
+<p><strong>Note:</strong> An issue was discovered with version 4.0 so it was never made public. This resulted in 4.0.1 being the first release in the 4.0 release line.</p>
+<p><strong>Important</strong>: Before upgrading to this new major version you will need to first upgrade your Overleaf Server Pro instance to version <a href="https://github.com/overleaf/overleaf/wiki/Release-Notes-3.x.x#server-pro-3510">3.5.10</a> and migrate your projects to the new Full Project History system. Server Pro 4.0.0 will fail to start unless all the projects have been migrated.</p>
+<p>Read <a href="https://github.com/overleaf/overleaf/wiki/Full-Project-History-Migration">Full Project History migration instructions</a>.</p>
+<p>This major release includes database migrations. Please ensure you have a <a href="https://github.com/overleaf/overleaf/wiki/Data-and-Backups">database backup</a> before upgrading.</p>
+<p>MongoDB now needs to run as a Replica Set. If you use an external Mongo database, you might already be running a replica set. If you use the Overleaf Toolkit you just need to pull the Toolkit's latest version. If you don't use the Toolkit, please see the instructions at the end of these release notes.</p>
+<p>We’ve also updated the version of Redis to <code>6.2</code>. This change requires no action other than updating the image version. If you’re using the Overleaf Toolkit, add the environment variable <code>REDIS_IMAGE=redis:6.2</code> to config/overleaf.rc (or update the version, if it was already defined). If you’re using a custom <code>docker-compose.yml</code>, change the <code>redis</code> container image to <code>redis:6.2</code>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If upgrading to Redis 6.2 results in a restart loop, see this <a href="/guides/common-problems/#upgrading-to-redis-62-results-in-a-restart-loop">article</a> in our <a href="/guides/common-problems/">troubleshooting guide</a> for more information.</p>
+</div>
+<h3 id="new-features-server-pro-only">New Features (Server Pro only)<a class="headerlink" href="#new-features-server-pro-only" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://www.overleaf.com/learn/how-to/Using_Git_and_GitHub#The_Overleaf_Git-Bridge">Overleaf Git integration</a> – See the documentation for <a href="https://github.com/overleaf/overleaf/wiki/Git-Integration">instructions</a> to set up the git-bridge in your Server Pro install. </li>
+<li><a href="https://www.overleaf.com/blog/the-updated-rich-text-editor-simplifies-team-collaboration">Enhanced Rich Text functionality</a> – Rich-text commenting and tracked changes.</li>
+<li>Support documentation for <a href="https://github.com/overleaf/overleaf/wiki/Horizontal-Scaling">horizontal scaling</a>, which allows for increased computing resources for large deployments</li>
+</ul>
+<h3 id="new-features-for-overleaf-community-edition-and-server-pro">New Features for Overleaf Community Edition and Server Pro<a class="headerlink" href="#new-features-for-overleaf-community-edition-and-server-pro" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>A new <a href="https://www.overleaf.com/blog/were-retiring-our-legacy-source-editor">Source editor</a> in addition to the Legacy editor will be available to users. (The Legacy editor will eventually be retired. If users have any feedback or issues, <a href="https://forms.gle/cf8UNM4kdorpYTmK9">please fill out this form</a>.) The new Source editor provides better accessibility, and better support for non-latin text.</p>
+</li>
+<li>
+<p>Deleted projects and users can be automatically cleaned up after 90 days. This is an opt-in feature that can be enabled by setting the <code>ENABLE_CRON_RESOURCE_DELETION</code> environment variable to <code>true</code>. See the <a href="https://github.com/overleaf/overleaf/wiki/Configuring-Overleaf">configuration documentation</a>. </p>
+</li>
+</ul>
+<h3 id="other-changes_4">Other changes<a class="headerlink" href="#other-changes_4" title="Permanent link">&para;</a></h3>
+<ul>
+<li>TeXLive 2023 is now the default version for instances not running Sandboxed Compiles.</li>
+<li>The limit on a project’s editable content size (the sum of sizes of all editable files) has been increased from 5MB to 7MB.</li>
+<li>General performance and stability improvements to the application, along with many small improvements and bug fixes.</li>
+</ul>
+<h3 id="manually-setting-up-mongodb-as-a-replica-set">Manually setting up MongoDB as a replica set<a class="headerlink" href="#manually-setting-up-mongodb-as-a-replica-set" title="Permanent link">&para;</a></h3>
+<p>The following instructions are not necessary if you use the Overleaf Toolkit or if you use an external Mongo database already configured as a replica set.</p>
+<p>If you run MongoDB with <code>docker-compose</code>, add the following command to the <code>mongo</code> container configuration:</p>
+<div class="highlight"><pre><span></span><code>mongo:
+    command: &quot;--replSet overleaf&quot;
+</code></pre></div>
+<p>Restart the mongo container then start a mongo shell with <code>docker-compose exec mongo mongo</code>. In that shell, run the following command to initiate the replica set:</p>
+<div class="highlight"><pre><span></span><code>rs.initiate({ _id: &quot;overleaf&quot;, members: [ { _id: 0, host: &quot;mongo:27017&quot; } ] })
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../Release-Notes-5.x.x/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 5.x.x">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                5.x.x
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../Release-Notes-3.x.x/" class="md-footer__link md-footer__link--next" aria-label="Next: 3.x.x">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                3.x.x
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["search.share", "navigation.tabs", "navigation.footer", "navigation.path", "navigation.top", "content.code.copy", "content.code.select", "content.code.annotate", "content.action.edit", "navigation.expand"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "tags": {"Server Pro": "server_pro"}, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+      
+    
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
+</html>
